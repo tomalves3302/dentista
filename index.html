@@ -617,6 +617,162 @@ ul,ol{list-style:none}
 .testimonial-info .name{font-family:var(--font-heading);font-size:0.86rem;font-weight:700;color:var(--text-dark)}
 .testimonial-info .role{font-size:0.76rem;color:var(--text-muted)}
 
+/* ========== PORTFOLIO ========== */
+.portfolio{padding:100px 0;background:var(--bg-primary);position:relative;overflow:hidden}
+.portfolio::before{
+  content:'';position:absolute;top:0;left:0;right:0;bottom:0;
+  background:radial-gradient(ellipse at 30% 20%,rgba(29,78,216,0.06) 0%,transparent 60%);
+  pointer-events:none;
+}
+.portfolio .container{position:relative;z-index:2}
+.portfolio .section-title{color:#fff}
+.portfolio .section-subtitle{color:var(--text-secondary)}
+.portfolio-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:24px;
+}
+.portfolio-card{
+  background:var(--bg-card-dark);
+  border:1px solid var(--border-dark);
+  border-radius:var(--radius-lg);
+  overflow:hidden;
+  transition:all 0.5s cubic-bezier(0.4,0,0.2,1);
+  position:relative;
+  cursor:pointer;
+  text-decoration:none;
+  display:block;
+}
+.portfolio-card:hover{
+  transform:translateY(-10px);
+  box-shadow:0 20px 60px rgba(29,78,216,0.15);
+  border-color:rgba(29,78,216,0.2);
+}
+.portfolio-preview{
+  position:relative;
+  height:260px;
+  overflow:hidden;
+  background:var(--bg-secondary);
+}
+.portfolio-preview-inner{
+  width:100%;
+  position:absolute;
+  top:0;left:0;right:0;
+  transition:transform 4s cubic-bezier(0.4,0,0.2,1);
+}
+.portfolio-card:hover .portfolio-preview-inner{
+  transform:translateY(calc(-100% + 260px));
+}
+.portfolio-browser-bar{
+  display:flex;align-items:center;gap:6px;
+  padding:10px 14px;
+  background:rgba(255,255,255,0.04);
+  border-bottom:1px solid var(--border-dark);
+}
+.portfolio-browser-bar .dot{width:8px;height:8px;border-radius:50%}
+.portfolio-browser-bar .dot.r{background:#ff5f57}
+.portfolio-browser-bar .dot.y{background:#febc2e}
+.portfolio-browser-bar .dot.g{background:#28c840}
+.portfolio-browser-bar .url{
+  flex:1;margin-left:8px;font-size:0.65rem;
+  color:var(--text-secondary);background:rgba(255,255,255,0.04);
+  padding:4px 10px;border-radius:5px;
+}
+.portfolio-mock-hero{
+  padding:24px 18px;
+  min-height:180px;
+  display:flex;flex-direction:column;justify-content:center;
+}
+.portfolio-mock-hero h4{
+  font-family:var(--font-heading);
+  font-size:0.95rem;font-weight:700;
+  margin-bottom:6px;letter-spacing:-0.3px;
+}
+.portfolio-mock-hero p{font-size:0.7rem;margin-bottom:12px;opacity:0.7;line-height:1.5}
+.portfolio-mock-btn{
+  display:inline-flex;align-items:center;gap:5px;
+  padding:7px 16px;border-radius:50px;
+  font-size:0.68rem;font-weight:600;
+  width:fit-content;
+}
+.portfolio-mock-stats{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:6px;
+  padding:0 18px 18px;
+}
+.portfolio-mock-stat{
+  text-align:center;padding:10px 6px;border-radius:8px;
+}
+.portfolio-mock-stat .stat-num{
+  display:block;font-family:var(--font-heading);
+  font-size:0.95rem;font-weight:700;
+}
+.portfolio-mock-stat .stat-lbl{
+  display:block;font-size:0.58rem;opacity:0.6;margin-top:2px;
+}
+/* Card 1 - Dark Gold theme */
+.portfolio-card.theme-dark .portfolio-mock-hero{background:linear-gradient(135deg,#0a0e1a 0%,#151b2e 100%);color:#f0f1f3}
+.portfolio-card.theme-dark .portfolio-mock-btn{background:#c9a84c;color:#0a0e1a}
+.portfolio-card.theme-dark .portfolio-mock-stats .portfolio-mock-stat{background:rgba(201,168,76,0.08)}
+.portfolio-card.theme-dark .portfolio-mock-stat .stat-num{color:#c9a84c}
+.portfolio-card.theme-dark .portfolio-mock-stat .stat-lbl{color:#8a92a4}
+/* Card 2 - Light Teal theme */
+.portfolio-card.theme-light .portfolio-mock-hero{background:linear-gradient(135deg,#f0f5f3 0%,#e8f0ed 100%);color:#1a1a2e}
+.portfolio-card.theme-light .portfolio-mock-btn{background:#2a7d6e;color:#fff}
+.portfolio-card.theme-light .portfolio-mock-stats .portfolio-mock-stat{background:rgba(42,125,110,0.06)}
+.portfolio-card.theme-light .portfolio-mock-stat .stat-num{color:#2a7d6e}
+.portfolio-card.theme-light .portfolio-mock-stat .stat-lbl{color:#64748b}
+/* Card 3 - Dark Coral theme */
+.portfolio-card.theme-bold .portfolio-mock-hero{background:linear-gradient(135deg,#111111 0%,#1a1a2e 100%);color:#f0f1f3}
+.portfolio-card.theme-bold .portfolio-mock-btn{background:#e85d75;color:#fff}
+.portfolio-card.theme-bold .portfolio-mock-stats .portfolio-mock-stat{background:rgba(232,93,117,0.08)}
+.portfolio-card.theme-bold .portfolio-mock-stat .stat-num{color:#e85d75}
+.portfolio-card.theme-bold .portfolio-mock-stat .stat-lbl{color:#8a92a4}
+
+.portfolio-info{padding:24px}
+.portfolio-info .portfolio-type{
+  font-size:0.68rem;font-weight:700;
+  letter-spacing:2px;text-transform:uppercase;
+  color:var(--accent-light);margin-bottom:8px;
+  display:flex;align-items:center;gap:6px;
+}
+.portfolio-info h3{
+  font-family:var(--font-heading);
+  font-size:1.05rem;font-weight:700;
+  color:#fff;margin-bottom:6px;
+  letter-spacing:-0.3px;
+}
+.portfolio-info .portfolio-desc{
+  font-size:0.82rem;color:var(--text-secondary);
+  line-height:1.6;margin-bottom:16px;
+}
+.portfolio-link{
+  display:inline-flex;align-items:center;gap:6px;
+  font-size:0.8rem;font-weight:600;
+  color:var(--accent-light);
+  transition:var(--transition);
+}
+.portfolio-card:hover .portfolio-link{
+  gap:10px;color:#fff;
+}
+.portfolio-badge{
+  position:absolute;top:16px;right:16px;z-index:3;
+  background:rgba(29,78,216,0.9);color:#fff;
+  font-size:0.62rem;font-weight:700;
+  padding:5px 12px;border-radius:50px;
+  letter-spacing:1px;text-transform:uppercase;
+  backdrop-filter:blur(8px);
+}
+
+@media(max-width:1024px){
+  .portfolio-grid{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:768px){
+  .portfolio-grid{grid-template-columns:1fr}
+  .portfolio-preview{height:220px}
+  .portfolio-card:hover .portfolio-preview-inner{transform:translateY(calc(-100% + 220px))}
+  .portfolio{padding:70px 0}
+}
+
 /* ========== OFERTA ========== */
 .oferta{
   padding:100px 0;
@@ -848,6 +1004,57 @@ ul,ol{list-style:none}
   animation:numberCount 0.6s ease forwards;
 }
 
+/* ========== PORTFOLIO ========== */
+.portfolio{padding:100px 0;background:var(--bg-white)}
+.portfolio-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.portfolio-card{
+  background:var(--bg-light);border:1px solid var(--border-light);
+  border-radius:var(--radius-lg);overflow:hidden;
+  transition:var(--transition);position:relative;
+}
+.portfolio-card:hover{transform:translateY(-8px);box-shadow:var(--shadow-lg);border-color:transparent}
+.portfolio-thumb{
+  position:relative;height:220px;overflow:hidden;
+  background:var(--bg-primary);
+}
+.portfolio-thumb iframe{
+  width:200%;height:200%;
+  transform:scale(0.5);transform-origin:top left;
+  border:none;pointer-events:none;
+}
+.portfolio-overlay{
+  position:absolute;top:0;left:0;right:0;bottom:0;
+  background:linear-gradient(180deg,transparent 40%,rgba(0,0,0,0.7));
+  opacity:0;transition:var(--transition);
+  display:flex;align-items:flex-end;justify-content:center;padding:24px;
+}
+.portfolio-card:hover .portfolio-overlay{opacity:1}
+.portfolio-overlay .btn-view{
+  background:#fff;color:var(--text-dark);
+  padding:10px 24px;border-radius:50px;
+  font-weight:600;font-size:0.85rem;
+  display:inline-flex;align-items:center;gap:8px;
+  transition:var(--transition);
+}
+.portfolio-overlay .btn-view:hover{background:var(--accent);color:#fff}
+.portfolio-info{padding:24px}
+.portfolio-info h3{
+  font-family:var(--font-heading);font-size:1.05rem;
+  font-weight:700;color:var(--text-dark);margin-bottom:6px;letter-spacing:-0.3px;
+}
+.portfolio-info p{font-size:0.84rem;color:var(--text-dark-secondary);line-height:1.6}
+.portfolio-tags{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+.portfolio-tags span{
+  font-size:0.7rem;font-weight:600;padding:4px 12px;
+  border-radius:50px;background:var(--accent-soft);color:var(--accent);
+  letter-spacing:0.3px;
+}
+
+@media(max-width:768px){
+  .portfolio-grid{grid-template-columns:1fr}
+  .portfolio-thumb{height:200px}
+}
+
 /* ========== RESPONSIVE ========== */
 @media(max-width:1024px){
   .hero .container{grid-template-columns:1fr;gap:40px}
@@ -912,7 +1119,7 @@ ul,ol{list-style:none}
 
 <noscript>
   <img height="1" width="1" style="display:none"
-  src="https://www.facebook.com/tr?id=871525522599793&ev=PageView&noscript=1"/>
+  src="https://www.facebook.com/tr?id=1268843201323818&ev=PageView&noscript=1"/>
 </noscript>
 <!-- End Meta Pixel Code -->
 </head>
@@ -1253,6 +1460,198 @@ ul,ol{list-style:none}
           <div class="testimonial-info">
             <div class="name">Dr. Lucas Ferreira</div>
             <div class="role">Clínico Geral — Contagem/MG</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PORTFOLIO -->
+<section class="portfolio" id="portfolio">
+  <div class="container">
+    <div class="section-header-left reveal">
+      <span class="section-tag section-tag-light"><span class="tag-line"></span>Nosso Portfólio</span>
+      <h2 class="section-title">Sites que já estão convertendo pacientes</h2>
+      <p class="section-subtitle">Conheça alguns dos sites que criamos para dentistas reais. Cada projeto é único, personalizado para a clínica e sua especialidade.</p>
+    </div>
+    <div class="portfolio-grid">
+
+      <!-- Card 1 - Clínica Sorriso Perfeito -->
+      <a href="portfolio/clinica-sorriso-perfeito.html" target="_blank" class="portfolio-card theme-dark reveal">
+        <span class="portfolio-badge">Implantodontia</span>
+        <div class="portfolio-preview">
+          <div class="portfolio-preview-inner">
+            <div class="portfolio-browser-bar">
+              <span class="dot r"></span><span class="dot y"></span><span class="dot g"></span>
+              <span class="url">sorrisoperfeito.dentalconvert.com</span>
+            </div>
+            <div class="portfolio-mock-hero">
+              <h4>Clínica Sorriso Perfeito</h4>
+              <p>Especialistas em implantes dentários com mais de 15 anos de experiência em Belo Horizonte.</p>
+              <span class="portfolio-mock-btn">Agendar Avaliação</span>
+            </div>
+            <div class="portfolio-mock-stats">
+              <div class="portfolio-mock-stat"><span class="stat-num">15+</span><span class="stat-lbl">Anos</span></div>
+              <div class="portfolio-mock-stat"><span class="stat-num">3.000+</span><span class="stat-lbl">Implantes</span></div>
+              <div class="portfolio-mock-stat"><span class="stat-num">98%</span><span class="stat-lbl">Satisfação</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="portfolio-info">
+          <div class="portfolio-type">
+            <svg class="icon-svg sm"><use href="#i-monitor"/></svg>
+            Implantodontia
+          </div>
+          <h3>Clínica Sorriso Perfeito</h3>
+          <p class="portfolio-desc">Site premium com tema escuro e acentos dourados. Focado em conversão para implantes dentários em BH.</p>
+          <span class="portfolio-link">
+            Ver projeto completo
+            <svg class="icon-svg sm"><use href="#i-arrow-right"/></svg>
+          </span>
+        </div>
+      </a>
+
+      <!-- Card 2 - Dra. Marina Lopes -->
+      <a href="portfolio/dra-marina-lopes.html" target="_blank" class="portfolio-card theme-light reveal delay-1">
+        <span class="portfolio-badge">Ortodontia</span>
+        <div class="portfolio-preview">
+          <div class="portfolio-preview-inner">
+            <div class="portfolio-browser-bar">
+              <span class="dot r"></span><span class="dot y"></span><span class="dot g"></span>
+              <span class="url">dramarina.dentalconvert.com</span>
+            </div>
+            <div class="portfolio-mock-hero">
+              <h4>Dra. Marina Lopes</h4>
+              <p>Ortodontista especializada em Invisalign e aparelhos estéticos na região da Av. Paulista.</p>
+              <span class="portfolio-mock-btn">Agendar Consulta</span>
+            </div>
+            <div class="portfolio-mock-stats">
+              <div class="portfolio-mock-stat"><span class="stat-num">2.800+</span><span class="stat-lbl">Sorrisos</span></div>
+              <div class="portfolio-mock-stat"><span class="stat-num">12</span><span class="stat-lbl">Anos</span></div>
+              <div class="portfolio-mock-stat"><span class="stat-num">4.9</span><span class="stat-lbl">Google</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="portfolio-info">
+          <div class="portfolio-type">
+            <svg class="icon-svg sm"><use href="#i-monitor"/></svg>
+            Ortodontia
+          </div>
+          <h3>Dra. Marina Lopes</h3>
+          <p class="portfolio-desc">Design clean e elegante com tons de menta. Marca pessoal forte para ortodontista em São Paulo.</p>
+          <span class="portfolio-link">
+            Ver projeto completo
+            <svg class="icon-svg sm"><use href="#i-arrow-right"/></svg>
+          </span>
+        </div>
+      </a>
+
+      <!-- Card 3 - OdontoVida Estética -->
+      <a href="portfolio/odontovida-estetica.html" target="_blank" class="portfolio-card theme-bold reveal delay-2">
+        <span class="portfolio-badge">Estética Dental</span>
+        <div class="portfolio-preview">
+          <div class="portfolio-preview-inner">
+            <div class="portfolio-browser-bar">
+              <span class="dot r"></span><span class="dot y"></span><span class="dot g"></span>
+              <span class="url">odontovida.dentalconvert.com</span>
+            </div>
+            <div class="portfolio-mock-hero">
+              <h4>OdontoVida Estética</h4>
+              <p>Odontologia estética de alta performance. Lentes de contato, clareamento e harmonização em Curitiba.</p>
+              <span class="portfolio-mock-btn">Quero Meu Sorriso</span>
+            </div>
+            <div class="portfolio-mock-stats">
+              <div class="portfolio-mock-stat"><span class="stat-num">5.000+</span><span class="stat-lbl">Procedimentos</span></div>
+              <div class="portfolio-mock-stat"><span class="stat-num">5</span><span class="stat-lbl">Especialistas</span></div>
+              <div class="portfolio-mock-stat"><span class="stat-num">4.8</span><span class="stat-lbl">Google</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="portfolio-info">
+          <div class="portfolio-type">
+            <svg class="icon-svg sm"><use href="#i-monitor"/></svg>
+            Estética Dental
+          </div>
+          <h3>OdontoVida Estética</h3>
+          <p class="portfolio-desc">Design bold com coral vibrante e fundo escuro. Impactante para clínica de estética dental em Curitiba.</p>
+          <span class="portfolio-link">
+            Ver projeto completo
+            <svg class="icon-svg sm"><use href="#i-arrow-right"/></svg>
+          </span>
+        </div>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<!-- PORTFOLIO -->
+<section class="portfolio" id="portfolio">
+  <div class="container">
+    <div class="section-header-left reveal">
+      <span class="section-tag"><span class="tag-line"></span>Portfólio</span>
+      <h2 class="section-title">Sites que já criamos para dentistas</h2>
+      <p class="section-subtitle">Veja exemplos reais de sites profissionais que construímos. Cada um é único, personalizado para a clínica e especialidade do dentista.</p>
+    </div>
+    <div class="portfolio-grid">
+      <div class="portfolio-card reveal">
+        <div class="portfolio-thumb">
+          <iframe src="portfolio/clinica-sorriso-perfeito.html" loading="lazy" scrolling="no" tabindex="-1"></iframe>
+          <a href="portfolio/clinica-sorriso-perfeito.html" target="_blank" class="portfolio-overlay">
+            <span class="btn-view">
+              <svg class="icon-svg sm"><use href="#i-globe"/></svg>
+              Ver Site Completo
+            </span>
+          </a>
+        </div>
+        <div class="portfolio-info">
+          <h3>Clínica Sorriso Perfeito</h3>
+          <p>Clínica de implantodontia em Belo Horizonte. Design dark premium com detalhes dourados.</p>
+          <div class="portfolio-tags">
+            <span>Implantodontia</span>
+            <span>BH/MG</span>
+            <span>Dark Theme</span>
+          </div>
+        </div>
+      </div>
+      <div class="portfolio-card reveal delay-1">
+        <div class="portfolio-thumb">
+          <iframe src="portfolio/dra-marina-lopes.html" loading="lazy" scrolling="no" tabindex="-1"></iframe>
+          <a href="portfolio/dra-marina-lopes.html" target="_blank" class="portfolio-overlay">
+            <span class="btn-view">
+              <svg class="icon-svg sm"><use href="#i-globe"/></svg>
+              Ver Site Completo
+            </span>
+          </a>
+        </div>
+        <div class="portfolio-info">
+          <h3>Dra. Marina Lopes</h3>
+          <p>Ortodontista em São Paulo. Design clean e elegante com tons de verde menta.</p>
+          <div class="portfolio-tags">
+            <span>Ortodontia</span>
+            <span>SP/SP</span>
+            <span>Clean Theme</span>
+          </div>
+        </div>
+      </div>
+      <div class="portfolio-card reveal delay-2">
+        <div class="portfolio-thumb">
+          <iframe src="portfolio/odontovida-estetica.html" loading="lazy" scrolling="no" tabindex="-1"></iframe>
+          <a href="portfolio/odontovida-estetica.html" target="_blank" class="portfolio-overlay">
+            <span class="btn-view">
+              <svg class="icon-svg sm"><use href="#i-globe"/></svg>
+              Ver Site Completo
+            </span>
+          </a>
+        </div>
+        <div class="portfolio-info">
+          <h3>OdontoVida Estética</h3>
+          <p>Clínica de estética dental em Curitiba. Design moderno com tons coral e rosa.</p>
+          <div class="portfolio-tags">
+            <span>Estética Dental</span>
+            <span>Curitiba/PR</span>
+            <span>Coral Theme</span>
           </div>
         </div>
       </div>
