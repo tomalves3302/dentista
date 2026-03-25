@@ -1,54 +1,55 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
+  
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Site Profissional para Dentistas — Converta Visitantes em Pacientes</title>
 <meta name="description" content="Site profissional de conversão para clínicas odontológicas. Pronto em 25 horas. Transforme cliques em agendamentos.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://unpkg.com/lucide-static@latest/font/lucide.css">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 /* ========== RESET & BASE ========== */
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{
-  --bg-primary:#0b1121;
-  --bg-secondary:#0f172a;
-  --bg-card-dark:#141c2e;
-  --bg-card-dark-hover:#1a2540;
-  --bg-light:#f8f9fb;
-  --bg-light-alt:#f1f3f7;
+  --bg-primary:#101219;
+  --bg-secondary:#141822;
+  --bg-card-dark:#1a1f2e;
+  --bg-card-dark-hover:#1f2537;
+  --bg-light:#f7f8fa;
+  --bg-light-alt:#eef0f4;
   --bg-white:#ffffff;
-  --text-primary:#ffffff;
-  --text-secondary:#94a3b8;
-  --text-dark:#0f172a;
-  --text-dark-secondary:#475569;
-  --text-muted:#64748b;
-  --accent:#2563eb;
-  --accent-light:#3b82f6;
-  --accent-dark:#1d4ed8;
-  --accent-soft:rgba(37,99,235,0.08);
-  --accent-medium:rgba(37,99,235,0.15);
-  --accent-glow:rgba(37,99,235,0.12);
-  --green:#10b981;
-  --green-soft:rgba(16,185,129,0.08);
-  --green-border:rgba(16,185,129,0.2);
-  --red:#ef4444;
-  --red-soft:rgba(239,68,68,0.08);
+  --text-primary:#f0f1f3;
+  --text-secondary:#8a92a4;
+  --text-dark:#111827;
+  --text-dark-secondary:#4b5563;
+  --text-muted:#6b7280;
+  --accent:#1d4ed8;
+  --accent-light:#2563eb;
+  --accent-dark:#1e40af;
+  --accent-soft:rgba(29,78,216,0.07);
+  --accent-medium:rgba(29,78,216,0.13);
+  --accent-glow:rgba(29,78,216,0.10);
+  --green:#059669;
+  --green-soft:rgba(5,150,105,0.07);
+  --green-border:rgba(5,150,105,0.18);
+  --red:#dc2626;
+  --red-soft:rgba(220,38,38,0.06);
+  --amber:#d97706;
   --border-light:rgba(0,0,0,0.06);
   --border-dark:rgba(255,255,255,0.06);
-  --gradient-accent:linear-gradient(135deg,var(--accent),var(--accent-light));
-  --gradient-dark:linear-gradient(180deg,#0b1121 0%,#0f172a 100%);
-  --shadow-sm:0 1px 3px rgba(0,0,0,0.06);
-  --shadow-md:0 8px 30px rgba(0,0,0,0.08);
-  --shadow-lg:0 20px 50px rgba(0,0,0,0.1);
-  --shadow-accent:0 8px 30px rgba(37,99,235,0.15);
-  --shadow-card:0 1px 3px rgba(0,0,0,0.04),0 6px 16px rgba(0,0,0,0.04);
+  --gradient-accent:linear-gradient(135deg,var(--accent-dark),var(--accent-light));
+  --gradient-dark:linear-gradient(180deg,#101219 0%,#141822 100%);
+  --shadow-sm:0 1px 3px rgba(0,0,0,0.05);
+  --shadow-md:0 8px 30px rgba(0,0,0,0.07);
+  --shadow-lg:0 20px 50px rgba(0,0,0,0.09);
+  --shadow-accent:0 8px 30px rgba(29,78,216,0.12);
+  --shadow-card:0 1px 3px rgba(0,0,0,0.03),0 6px 16px rgba(0,0,0,0.04);
   --radius-sm:8px;
   --radius-md:14px;
   --radius-lg:20px;
-  --font-heading:'Plus Jakarta Sans',system-ui,-apple-system,sans-serif;
+  --font-heading:'Space Grotesk',system-ui,-apple-system,sans-serif;
   --font-body:'Inter',system-ui,-apple-system,sans-serif;
   --transition:0.3s cubic-bezier(0.4,0,0.2,1);
 }
@@ -59,7 +60,7 @@ a{text-decoration:none;color:inherit}
 ul,ol{list-style:none}
 .container{width:100%;max-width:1200px;margin:0 auto;padding:0 24px}
 
-/* ========== ICON SYSTEM (inline SVG) ========== */
+/* ========== ICON SYSTEM ========== */
 .icon-svg{width:24px;height:24px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0}
 .icon-svg.sm{width:18px;height:18px}
 .icon-svg.lg{width:28px;height:28px}
@@ -76,11 +77,14 @@ ul,ol{list-style:none}
 @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
 @keyframes shimmer{0%{background-position:-200% center}100%{background-position:200% center}}
 @keyframes gradientShift{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}
-@keyframes drawLine{from{stroke-dashoffset:100}to{stroke-dashoffset:0}}
 @keyframes countPulse{0%,100%{opacity:1}50%{opacity:.6}}
-@keyframes borderPulse{0%,100%{border-color:rgba(37,99,235,0.2)}50%{border-color:rgba(37,99,235,0.5)}}
-@keyframes ripple{0%{box-shadow:0 0 0 0 rgba(37,99,235,0.3)}100%{box-shadow:0 0 0 20px rgba(37,99,235,0)}}
-@keyframes typewriter{from{width:0}to{width:100%}}
+@keyframes borderPulse{0%,100%{border-color:rgba(29,78,216,0.15)}50%{border-color:rgba(29,78,216,0.4)}}
+@keyframes ripple{0%{box-shadow:0 0 0 0 rgba(29,78,216,0.25)}100%{box-shadow:0 0 0 20px rgba(29,78,216,0)}}
+@keyframes slideInStagger{from{opacity:0;transform:translateY(30px) scale(0.97)}to{opacity:1;transform:translateY(0) scale(1)}}
+@keyframes drawBorder{from{clip-path:inset(0 100% 0 0)}to{clip-path:inset(0 0 0 0)}}
+@keyframes numberCount{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+@keyframes glowPulse{0%,100%{box-shadow:0 0 20px rgba(29,78,216,0.1)}50%{box-shadow:0 0 40px rgba(29,78,216,0.2)}}
+@keyframes marquee{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
 
 .reveal{opacity:0;transform:translateY(35px);transition:opacity 0.8s cubic-bezier(0.16,1,0.3,1),transform 0.8s cubic-bezier(0.16,1,0.3,1)}
 .reveal.from-left{transform:translateX(-40px)}
@@ -100,7 +104,7 @@ ul,ol{list-style:none}
   color:var(--text-primary);
   text-align:center;
   padding:10px 20px;
-  font-size:0.82rem;
+  font-size:0.8rem;
   font-weight:600;
   letter-spacing:0.3px;
   position:relative;
@@ -108,7 +112,7 @@ ul,ol{list-style:none}
   display:flex;
   align-items:center;
   justify-content:center;
-  gap:8px;
+  gap:10px;
 }
 .top-bar .top-icon{color:var(--accent-light)}
 
@@ -117,7 +121,7 @@ ul,ol{list-style:none}
   position:sticky;
   top:0;
   z-index:1000;
-  background:rgba(255,255,255,0.9);
+  background:rgba(255,255,255,0.92);
   backdrop-filter:blur(20px);
   -webkit-backdrop-filter:blur(20px);
   border-bottom:1px solid var(--border-light);
@@ -125,17 +129,17 @@ ul,ol{list-style:none}
   transition:var(--transition);
 }
 .navbar.scrolled{
-  background:rgba(255,255,255,0.95);
-  box-shadow:0 1px 12px rgba(0,0,0,0.06);
+  background:rgba(255,255,255,0.97);
+  box-shadow:0 1px 12px rgba(0,0,0,0.05);
 }
 .navbar .container{display:flex;align-items:center;justify-content:space-between}
 .nav-logo{
   font-family:var(--font-heading);
-  font-size:1.4rem;
-  font-weight:800;
+  font-size:1.35rem;
+  font-weight:700;
   color:var(--text-dark);
   display:flex;align-items:center;gap:10px;
-  letter-spacing:-0.3px;
+  letter-spacing:-0.5px;
 }
 .nav-logo-icon{
   width:34px;height:34px;
@@ -150,10 +154,11 @@ ul,ol{list-style:none}
   padding:10px 24px;
   border-radius:50px;
   font-weight:600;
-  font-size:0.88rem;
+  font-size:0.86rem;
   transition:var(--transition);
   border:none;cursor:pointer;
   display:inline-flex;align-items:center;gap:6px;
+  font-family:var(--font-body);
 }
 .nav-cta:hover{
   background:var(--accent);
@@ -166,12 +171,13 @@ ul,ol{list-style:none}
   display:inline-flex;
   align-items:center;
   gap:8px;
-  font-size:0.75rem;
+  font-size:0.72rem;
   font-weight:700;
-  letter-spacing:2px;
+  letter-spacing:2.5px;
   text-transform:uppercase;
   color:var(--accent);
   margin-bottom:16px;
+  font-family:var(--font-body);
 }
 .section-tag .tag-line{
   width:24px;height:2px;
@@ -183,14 +189,14 @@ ul,ol{list-style:none}
 .section-title{
   font-family:var(--font-heading);
   font-size:clamp(1.8rem,4vw,2.8rem);
-  font-weight:800;
+  font-weight:700;
   line-height:1.15;
   margin-bottom:20px;
-  letter-spacing:-0.5px;
+  letter-spacing:-0.8px;
   color:var(--text-dark);
 }
 .section-subtitle{
-  font-size:1.05rem;
+  font-size:1.02rem;
   color:var(--text-dark-secondary);
   max-width:600px;
   line-height:1.7;
@@ -207,8 +213,8 @@ ul,ol{list-style:none}
   gap:10px;
   background:var(--accent);
   color:#fff;
-  font-weight:700;
-  font-size:1.05rem;
+  font-weight:600;
+  font-size:1rem;
   padding:18px 40px;
   border-radius:60px;
   border:none;
@@ -217,14 +223,14 @@ ul,ol{list-style:none}
   position:relative;
   overflow:hidden;
   letter-spacing:0.2px;
-  font-family:var(--font-heading);
+  font-family:var(--font-body);
 }
 .btn-primary::before{
   content:'';
   position:absolute;
   top:0;left:-100%;
   width:100%;height:100%;
-  background:linear-gradient(90deg,transparent,rgba(255,255,255,0.15),transparent);
+  background:linear-gradient(90deg,transparent,rgba(255,255,255,0.12),transparent);
   transition:0.5s;
 }
 .btn-primary:hover{
@@ -234,14 +240,14 @@ ul,ol{list-style:none}
 }
 .btn-primary:hover::before{left:100%}
 .btn-primary.btn-pulse{animation:pulse 2.8s ease-in-out infinite}
-.btn-primary.btn-large{padding:20px 48px;font-size:1.1rem}
+.btn-primary.btn-large{padding:20px 48px;font-size:1.05rem}
 .btn-primary.btn-on-dark{background:#fff;color:var(--accent)}
-.btn-primary.btn-on-dark:hover{background:#f1f5f9;box-shadow:0 8px 30px rgba(255,255,255,0.15)}
+.btn-primary.btn-on-dark:hover{background:#f1f5f9;box-shadow:0 8px 30px rgba(255,255,255,0.12)}
 
 .btn-micro{
   display:flex;align-items:center;gap:6px;
   margin-top:14px;
-  font-size:0.82rem;
+  font-size:0.8rem;
   color:var(--text-muted);
   font-weight:500;
 }
@@ -259,7 +265,7 @@ ul,ol{list-style:none}
   position:absolute;
   top:-200px;right:-150px;
   width:500px;height:500px;
-  background:radial-gradient(circle,rgba(37,99,235,0.05) 0%,transparent 70%);
+  background:radial-gradient(circle,rgba(29,78,216,0.04) 0%,transparent 70%);
   pointer-events:none;
 }
 .hero::after{
@@ -267,7 +273,7 @@ ul,ol{list-style:none}
   position:absolute;
   bottom:-100px;left:-100px;
   width:400px;height:400px;
-  background:radial-gradient(circle,rgba(37,99,235,0.03) 0%,transparent 70%);
+  background:radial-gradient(circle,rgba(29,78,216,0.03) 0%,transparent 70%);
   pointer-events:none;
 }
 .hero .container{
@@ -284,13 +290,14 @@ ul,ol{list-style:none}
   background:var(--accent-soft);
   border:1px solid var(--accent-medium);
   color:var(--accent);
-  font-size:0.78rem;
+  font-size:0.75rem;
   font-weight:700;
   padding:8px 16px;
   border-radius:50px;
   margin-bottom:24px;
-  letter-spacing:0.8px;
+  letter-spacing:1px;
   text-transform:uppercase;
+  font-family:var(--font-body);
 }
 .hero-badge .badge-dot{
   width:7px;height:7px;
@@ -300,19 +307,19 @@ ul,ol{list-style:none}
 }
 .hero-title{
   font-family:var(--font-heading);
-  font-size:clamp(2.2rem,4.5vw,3.3rem);
-  font-weight:800;
+  font-size:clamp(2.2rem,4.5vw,3.2rem);
+  font-weight:700;
   line-height:1.1;
   color:var(--text-dark);
   margin-bottom:20px;
-  letter-spacing:-0.8px;
+  letter-spacing:-1px;
 }
 .hero-title .highlight{
   color:var(--accent);
   position:relative;
 }
 .hero-subtitle{
-  font-size:1.08rem;
+  font-size:1.05rem;
   color:var(--text-dark-secondary);
   line-height:1.7;
   margin-bottom:32px;
@@ -328,7 +335,7 @@ ul,ol{list-style:none}
   display:flex;
   align-items:center;
   gap:8px;
-  font-size:0.88rem;
+  font-size:0.86rem;
   font-weight:600;
   color:var(--text-dark);
 }
@@ -387,7 +394,7 @@ ul,ol{list-style:none}
   padding:12px 8px;
   text-align:center;
 }
-.mock-stat .num{font-size:1.1rem;font-weight:800;color:var(--accent);display:block;font-family:var(--font-heading)}
+.mock-stat .num{font-size:1.1rem;font-weight:700;color:var(--accent);display:block;font-family:var(--font-heading)}
 .mock-stat .label{font-size:0.62rem;color:var(--text-muted);margin-top:2px;display:block}
 
 .mockup-float{
@@ -416,7 +423,7 @@ ul,ol{list-style:none}
 .social-proof-bar{
   background:var(--bg-primary);
   color:var(--text-primary);
-  padding:20px 0;
+  padding:18px 0;
   overflow:hidden;
 }
 .proof-track{
@@ -425,10 +432,10 @@ ul,ol{list-style:none}
 }
 .proof-item{
   display:flex;align-items:center;gap:10px;
-  font-size:0.9rem;font-weight:600;white-space:nowrap;
+  font-size:0.88rem;font-weight:600;white-space:nowrap;
 }
 .proof-item .proof-icon{color:var(--accent-light)}
-.proof-divider{width:1px;height:18px;background:rgba(255,255,255,0.1)}
+.proof-divider{width:1px;height:18px;background:rgba(255,255,255,0.08)}
 
 /* ========== PROBLEMA ========== */
 .problema{padding:100px 0;background:var(--bg-white)}
@@ -461,11 +468,13 @@ ul,ol{list-style:none}
   display:flex;align-items:center;justify-content:center;
   color:var(--red);
   margin-bottom:16px;
+  transition:var(--transition);
 }
-.pain-card p{font-size:0.95rem;color:var(--text-dark-secondary);line-height:1.7}
+.pain-card:hover .card-icon{transform:scale(1.08)}
+.pain-card p{font-size:0.93rem;color:var(--text-dark-secondary);line-height:1.7}
 .transition-text{
   text-align:center;margin-top:50px;
-  font-size:1.1rem;font-weight:600;color:var(--text-dark);
+  font-size:1.05rem;font-weight:600;color:var(--text-dark);
   display:flex;align-items:center;justify-content:center;gap:8px;
 }
 .transition-text .arrow-icon{color:var(--accent);animation:float 2s ease-in-out infinite}
@@ -497,9 +506,9 @@ ul,ol{list-style:none}
   border-color:transparent;
 }
 .benefit-card .card-icon{
-  width:50px;height:50px;
+  width:48px;height:48px;
   background:var(--accent-soft);
-  border-radius:13px;
+  border-radius:12px;
   display:flex;align-items:center;justify-content:center;
   color:var(--accent);
   margin-bottom:18px;
@@ -511,10 +520,11 @@ ul,ol{list-style:none}
 }
 .benefit-card h3{
   font-family:var(--font-heading);
-  font-size:1.05rem;font-weight:700;
+  font-size:1.02rem;font-weight:700;
   margin-bottom:10px;color:var(--text-dark);
+  letter-spacing:-0.3px;
 }
-.benefit-card p{font-size:0.9rem;color:var(--text-dark-secondary);line-height:1.65}
+.benefit-card p{font-size:0.88rem;color:var(--text-dark-secondary);line-height:1.65}
 
 /* ========== COMO FUNCIONA ========== */
 .como-funciona{padding:100px 0;background:var(--bg-white)}
@@ -545,7 +555,7 @@ ul,ol{list-style:none}
   background:var(--accent);color:#fff;
   border-radius:50%;
   display:flex;align-items:center;justify-content:center;
-  font-size:1.2rem;font-weight:800;
+  font-size:1.2rem;font-weight:700;
   margin:0 auto 20px;
   font-family:var(--font-heading);
   box-shadow:var(--shadow-accent);
@@ -554,13 +564,14 @@ ul,ol{list-style:none}
 .step-card:hover .step-number{transform:scale(1.1)}
 .step-card h3{
   font-family:var(--font-heading);
-  font-size:1.05rem;font-weight:700;
+  font-size:1.02rem;font-weight:700;
   margin-bottom:10px;color:var(--text-dark);
+  letter-spacing:-0.3px;
 }
-.step-card p{font-size:0.88rem;color:var(--text-dark-secondary);line-height:1.65}
+.step-card p{font-size:0.86rem;color:var(--text-dark-secondary);line-height:1.65}
 .step-time{
   display:inline-flex;align-items:center;gap:6px;
-  margin-top:16px;font-size:0.8rem;font-weight:700;
+  margin-top:16px;font-size:0.78rem;font-weight:700;
   color:var(--accent);background:var(--accent-soft);
   padding:6px 14px;border-radius:50px;
 }
@@ -580,16 +591,16 @@ ul,ol{list-style:none}
   box-shadow:var(--shadow-lg);
 }
 .testimonial-stars{display:flex;gap:3px;margin-bottom:12px}
-.testimonial-stars svg{color:#f59e0b}
+.testimonial-stars svg{color:var(--amber)}
 .testimonial-metric{
   display:inline-flex;align-items:center;gap:6px;
-  background:var(--green-soft);color:#059669;
-  font-size:0.82rem;font-weight:700;
+  background:var(--green-soft);color:var(--green);
+  font-size:0.8rem;font-weight:700;
   padding:6px 14px;border-radius:50px;
   margin-bottom:16px;
 }
 .testimonial-card blockquote{
-  font-size:0.92rem;color:var(--text-dark-secondary);
+  font-size:0.9rem;color:var(--text-dark-secondary);
   line-height:1.7;margin-bottom:20px;
   font-style:italic;position:relative;
   padding-left:16px;border-left:3px solid var(--accent);
@@ -600,11 +611,11 @@ ul,ol{list-style:none}
   background:var(--gradient-accent);
   border-radius:50%;
   display:flex;align-items:center;justify-content:center;
-  font-size:0.85rem;font-weight:800;color:#fff;
+  font-size:0.82rem;font-weight:700;color:#fff;
   font-family:var(--font-heading);
 }
-.testimonial-info .name{font-family:var(--font-heading);font-size:0.88rem;font-weight:700;color:var(--text-dark)}
-.testimonial-info .role{font-size:0.78rem;color:var(--text-muted)}
+.testimonial-info .name{font-family:var(--font-heading);font-size:0.86rem;font-weight:700;color:var(--text-dark)}
+.testimonial-info .role{font-size:0.76rem;color:var(--text-muted)}
 
 /* ========== OFERTA ========== */
 .oferta{
@@ -616,7 +627,7 @@ ul,ol{list-style:none}
 .oferta::before{
   content:'';position:absolute;
   top:0;left:0;right:0;bottom:0;
-  background:radial-gradient(ellipse at 50% 0%,rgba(37,99,235,0.06) 0%,transparent 60%);
+  background:radial-gradient(ellipse at 50% 0%,rgba(29,78,216,0.05) 0%,transparent 60%);
   pointer-events:none;
 }
 .oferta .container{position:relative;z-index:2}
@@ -627,7 +638,7 @@ ul,ol{list-style:none}
   display:flex;align-items:center;justify-content:space-between;
   padding:16px 0;
   border-bottom:1px solid var(--border-dark);
-  font-size:0.95rem;
+  font-size:0.93rem;
 }
 .stack-item .item-label{display:flex;align-items:center;gap:12px;flex:1}
 .stack-item .item-label .icon-svg{color:var(--accent-light)}
@@ -638,15 +649,15 @@ ul,ol{list-style:none}
 
 .bonus-section{
   max-width:700px;margin:0 auto 50px;
-  background:rgba(37,99,235,0.05);
-  border:1px solid rgba(37,99,235,0.12);
+  background:rgba(29,78,216,0.04);
+  border:1px solid rgba(29,78,216,0.1);
   border-radius:var(--radius-lg);
   padding:36px 32px;
 }
 .bonus-title{
   font-family:var(--font-heading);
-  font-size:0.85rem;font-weight:800;
-  letter-spacing:2px;color:var(--accent-light);
+  font-size:0.82rem;font-weight:700;
+  letter-spacing:2.5px;color:var(--accent-light);
   margin-bottom:24px;text-transform:uppercase;
   display:flex;align-items:center;gap:10px;
 }
@@ -658,27 +669,27 @@ ul,ol{list-style:none}
 .bonus-item:last-child{border-bottom:none}
 .bonus-item .bonus-icon{
   width:42px;height:42px;
-  background:rgba(37,99,235,0.1);
+  background:rgba(29,78,216,0.08);
   border-radius:11px;
   display:flex;align-items:center;justify-content:center;
   color:var(--accent-light);flex-shrink:0;
 }
-.bonus-item h4{font-family:var(--font-heading);font-size:0.92rem;font-weight:700;margin-bottom:4px}
-.bonus-item p{font-size:0.8rem;color:var(--text-secondary);line-height:1.5}
-.bonus-item .bonus-value{font-size:0.78rem;color:var(--accent-light);font-weight:600;margin-top:4px;display:block}
+.bonus-item h4{font-family:var(--font-heading);font-size:0.9rem;font-weight:700;margin-bottom:4px;letter-spacing:-0.2px}
+.bonus-item p{font-size:0.78rem;color:var(--text-secondary);line-height:1.5}
+.bonus-item .bonus-value{font-size:0.76rem;color:var(--accent-light);font-weight:600;margin-top:4px;display:block}
 
 .price-block{text-align:center;margin-bottom:36px}
-.price-from{font-size:1rem;color:var(--text-secondary);margin-bottom:4px}
+.price-from{font-size:0.95rem;color:var(--text-secondary);margin-bottom:4px}
 .price-from s{font-weight:600}
 .price-main{
   font-family:var(--font-heading);
   font-size:clamp(3rem,6vw,4.5rem);
-  font-weight:800;color:#fff;
+  font-weight:700;color:#fff;
   line-height:1;margin:8px 0;
-  letter-spacing:-1px;
+  letter-spacing:-1.5px;
 }
 .price-main .currency{font-size:0.4em;vertical-align:super;margin-right:4px}
-.price-installment{font-size:1rem;color:var(--text-secondary);font-weight:500}
+.price-installment{font-size:0.95rem;color:var(--text-secondary);font-weight:500}
 
 .oferta-cta{text-align:center;margin-bottom:40px}
 .oferta-cta .btn-micro{justify-content:center}
@@ -693,17 +704,28 @@ ul,ol{list-style:none}
 }
 .garantia-card .garantia-icon{
   width:48px;height:48px;
-  background:rgba(16,185,129,0.15);
+  background:rgba(5,150,105,0.12);
   border-radius:12px;
   display:flex;align-items:center;justify-content:center;
   color:var(--green);flex-shrink:0;
 }
 .garantia-card h4{
   font-family:var(--font-heading);
-  font-size:1.05rem;font-weight:700;
+  font-size:1.02rem;font-weight:700;
   color:var(--green);margin-bottom:8px;
+  letter-spacing:-0.3px;
 }
-.garantia-card p{font-size:0.9rem;color:var(--text-secondary);line-height:1.65}
+.garantia-card p{font-size:0.88rem;color:var(--text-secondary);line-height:1.65}
+
+/* ========== HOSTING NOTE ========== */
+.hosting-note{
+  max-width:700px;margin:28px auto 0;
+  font-size:0.76rem;
+  color:var(--text-secondary);
+  text-align:center;
+  opacity:0.7;
+  line-height:1.6;
+}
 
 /* ========== FAQ ========== */
 .faq{padding:100px 0;background:var(--bg-white)}
@@ -716,14 +738,14 @@ ul,ol{list-style:none}
   overflow:hidden;
   transition:var(--transition);
 }
-.faq-item:hover{border-color:rgba(37,99,235,0.15)}
-.faq-item.active{border-color:var(--accent);box-shadow:0 2px 12px rgba(37,99,235,0.08)}
+.faq-item:hover{border-color:rgba(29,78,216,0.12)}
+.faq-item.active{border-color:var(--accent);box-shadow:0 2px 12px rgba(29,78,216,0.06)}
 .faq-question{
   display:flex;align-items:center;justify-content:space-between;
   padding:20px 24px;cursor:pointer;
-  font-weight:600;font-size:0.93rem;color:var(--text-dark);
+  font-weight:600;font-size:0.91rem;color:var(--text-dark);
   gap:14px;user-select:none;
-  font-family:var(--font-heading);
+  font-family:var(--font-body);
 }
 .faq-question .faq-toggle{
   width:26px;height:26px;border-radius:50%;
@@ -738,12 +760,12 @@ ul,ol{list-style:none}
 }
 .faq-answer{max-height:0;overflow:hidden;transition:max-height 0.4s ease}
 .faq-item.active .faq-answer{max-height:300px}
-.faq-answer-inner{padding:0 24px 20px;font-size:0.9rem;color:var(--text-dark-secondary);line-height:1.7}
+.faq-answer-inner{padding:0 24px 20px;font-size:0.88rem;color:var(--text-dark-secondary);line-height:1.7}
 
 /* ========== CTA FINAL ========== */
 .cta-final{
   padding:100px 0;
-  background:linear-gradient(180deg,#0b1121 0%,#111b33 50%,#0b1121 100%);
+  background:linear-gradient(180deg,#101219 0%,#161b28 50%,#101219 100%);
   color:var(--text-primary);
   text-align:center;
   position:relative;overflow:hidden;
@@ -752,22 +774,22 @@ ul,ol{list-style:none}
   content:'';position:absolute;
   top:50%;left:50%;width:600px;height:600px;
   transform:translate(-50%,-50%);
-  background:radial-gradient(circle,rgba(37,99,235,0.06) 0%,transparent 70%);
+  background:radial-gradient(circle,rgba(29,78,216,0.05) 0%,transparent 70%);
   pointer-events:none;
 }
 .countdown{
   display:flex;align-items:center;justify-content:center;
-  gap:10px;margin-bottom:36px;font-size:0.9rem;color:var(--text-secondary);
+  gap:10px;margin-bottom:36px;font-size:0.88rem;color:var(--text-secondary);
 }
 .countdown-timer{display:flex;gap:6px}
 .countdown-unit{
-  background:rgba(37,99,235,0.08);
-  border:1px solid rgba(37,99,235,0.15);
+  background:rgba(29,78,216,0.06);
+  border:1px solid rgba(29,78,216,0.12);
   border-radius:var(--radius-sm);
   padding:8px 12px;min-width:52px;text-align:center;
 }
 .countdown-unit .num{
-  display:block;font-size:1.4rem;font-weight:800;
+  display:block;font-size:1.4rem;font-weight:700;
   color:var(--accent-light);line-height:1;
   font-family:var(--font-heading);
 }
@@ -788,27 +810,42 @@ ul,ol{list-style:none}
   text-align:center;
   border-top:1px solid var(--border-dark);
 }
-.footer p{font-size:0.82rem;margin-bottom:10px}
-.footer-links{display:flex;justify-content:center;gap:24px;font-size:0.8rem}
+.footer p{font-size:0.8rem;margin-bottom:10px}
+.footer-links{display:flex;justify-content:center;gap:24px;font-size:0.78rem}
 .footer-links a{color:var(--text-secondary);transition:var(--transition)}
 .footer-links a:hover{color:var(--accent-light)}
 
-/* ========== CTA FLOAT (Email Form) ========== */
+/* ========== CTA FLOAT ========== */
 .cta-float{
   position:fixed;bottom:24px;right:24px;z-index:9999;
-  display:flex;align-items:center;gap:12px;
+  display:flex;align-items:center;gap:10px;
   background:var(--accent);color:#fff;
   padding:14px 24px;border-radius:60px;
-  font-weight:700;font-size:0.9rem;
-  box-shadow:0 8px 30px rgba(37,99,235,0.35);
+  font-weight:600;font-size:0.88rem;
+  box-shadow:0 8px 30px rgba(29,78,216,0.3);
   transition:var(--transition);cursor:pointer;
-  font-family:var(--font-heading);
-  animation:ripple 3s infinite;
+  font-family:var(--font-body);
+  animation:glowPulse 3s infinite;
 }
 .cta-float:hover{
   background:var(--accent-dark);
   transform:scale(1.05);
-  box-shadow:0 10px 40px rgba(37,99,235,0.45);
+  box-shadow:0 10px 40px rgba(29,78,216,0.4);
+}
+
+/* ========== PARALLAX-LIKE DEPTH ========== */
+.depth-layer{
+  transition:transform 0.15s ease-out;
+  will-change:transform;
+}
+
+/* ========== COUNTER ANIMATION ========== */
+.count-up{
+  display:inline-block;
+  transition:all 0.4s ease;
+}
+.count-up.animated{
+  animation:numberCount 0.6s ease forwards;
 }
 
 /* ========== RESPONSIVE ========== */
@@ -831,8 +868,8 @@ ul,ol{list-style:none}
   .testimonials-grid{grid-template-columns:1fr}
   .proof-track{flex-direction:column;gap:10px}
   .proof-divider{width:40px;height:1px}
-  .btn-primary{width:100%;font-size:0.95rem;padding:16px 28px}
-  .btn-primary.btn-large{padding:18px 28px;font-size:1rem}
+  .btn-primary{width:100%;font-size:0.93rem;padding:16px 28px}
+  .btn-primary.btn-large{padding:18px 28px;font-size:0.98rem}
   .garantia-card{flex-direction:column;text-align:center;align-items:center}
   .mockup-browser{transform:none}
   .mockup-float{display:none}
@@ -840,7 +877,7 @@ ul,ol{list-style:none}
   .problema,.solucao,.como-funciona,.depoimentos,.oferta,.faq,.cta-final{padding:70px 0}
   .value-stack{margin-bottom:30px}
   .bonus-section{padding:24px 20px}
-  .stack-item{font-size:0.85rem;flex-wrap:wrap;gap:8px}
+  .stack-item{font-size:0.83rem;flex-wrap:wrap;gap:8px}
   .stack-item .item-price{margin-left:auto}
   .cta-float{padding:12px 20px;font-size:0.82rem;bottom:18px;right:18px}
   .countdown{flex-direction:column;gap:12px}
@@ -851,17 +888,37 @@ ul,ol{list-style:none}
 @media(max-width:480px){
   html{font-size:15px}
   .hero-title{font-size:clamp(1.7rem,7vw,2.4rem)}
-  .nav-logo{font-size:1.2rem}
+  .nav-logo{font-size:1.15rem}
   .nav-logo-icon{width:30px;height:30px}
-  .nav-cta{padding:8px 18px;font-size:0.82rem}
+  .nav-cta{padding:8px 18px;font-size:0.8rem}
   .mockup-content{padding:16px}
   .price-main{font-size:3rem}
 }
 </style>
+<!-- Meta Pixel Code -->
+<script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+
+  fbq('init', '871525522599793');
+  fbq('track', 'PageView');
+</script>
+
+<noscript>
+  <img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=871525522599793&ev=PageView&noscript=1"/>
+</noscript>
+<!-- End Meta Pixel Code -->
 </head>
 <body>
 
-<!-- SVG ICON DEFINITIONS (hidden) -->
+<!-- SVG ICON DEFINITIONS -->
 <svg style="display:none" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <symbol id="i-check-circle" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></symbol>
@@ -891,6 +948,8 @@ ul,ol{list-style:none}
     <symbol id="i-edit" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></symbol>
     <symbol id="i-monitor" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></symbol>
     <symbol id="i-flame" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/></symbol>
+    <symbol id="i-send" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></symbol>
+    <symbol id="i-clipboard" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1" ry="1"/></symbol>
   </defs>
 </svg>
 
@@ -909,7 +968,7 @@ ul,ol{list-style:none}
       </span>
       DentalConvert
     </a>
-    <a href="#oferta" class="nav-cta">
+    <a href="https://pay.kiwify.com.br/ulVlbSo" class="nav-cta">
       Quero Meu Site
       <svg class="icon-svg sm"><use href="#i-arrow-right"/></svg>
     </a>
@@ -930,7 +989,7 @@ ul,ol{list-style:none}
       <p class="hero-subtitle reveal delay-2">
         Site profissional feito sob medida para sua clínica, com análise dos seus concorrentes e otimizado para transformar cada clique em paciente na sua cadeira.
       </p>
-      <a href="#oferta" class="btn-primary btn-large reveal delay-3" id="hero-cta">
+      <a href="https://pay.kiwify.com.br/ulVlbSo" class="btn-primary btn-large reveal delay-3" id="hero-cta">
         <svg class="icon-svg"><use href="#i-arrow-right"/></svg>
         Quero Meu Site por R$497
       </a>
@@ -941,7 +1000,7 @@ ul,ol{list-style:none}
       <div class="hero-proof reveal delay-4">
         <div class="hero-proof-item">
           <svg class="icon-svg sm proof-icon"><use href="#i-check-circle"/></svg>
-          +180 dentistas atendidos
+          <span>+<span class="count-up" data-target="180">0</span> dentistas atendidos</span>
         </div>
         <div class="hero-proof-item">
           <svg class="icon-svg sm proof-icon"><use href="#i-star"/></svg>
@@ -954,7 +1013,7 @@ ul,ol{list-style:none}
       </div>
     </div>
     <div class="hero-visual reveal from-right delay-2">
-      <div class="mockup-wrapper">
+      <div class="mockup-wrapper depth-layer" data-depth="0.03">
         <div class="mockup-float pos-tr">
           <span class="float-icon green">
             <svg class="icon-svg sm"><use href="#i-trending-up"/></svg>
@@ -979,7 +1038,7 @@ ul,ol{list-style:none}
               <h3>Clínica Sorriso Perfeito</h3>
               <p>Especialistas em transformar sorrisos. Agende sua avaliação.</p>
               <span class="mock-btn">
-                <svg class="icon-svg sm"><use href="#i-smartphone"/></svg>
+                <svg class="icon-svg sm"><use href="#i-clipboard"/></svg>
                 Agendar Consulta
               </span>
             </div>
@@ -1078,9 +1137,9 @@ ul,ol{list-style:none}
         <p>Carrega em menos de 2 segundos. Cada segundo de espera = 7% menos conversão. Seu site não perde ninguém.</p>
       </div>
       <div class="benefit-card reveal delay-3">
-        <div class="card-icon"><svg class="icon-svg"><use href="#i-message-circle"/></svg></div>
-        <h3>Contato Direto</h3>
-        <p>Paciente clica e já envia seus dados para agendamento. Sem formulário complicado, sem barreira nenhuma.</p>
+        <div class="card-icon"><svg class="icon-svg"><use href="#i-send"/></svg></div>
+        <h3>Formulário de Agendamento Direto</h3>
+        <p>Paciente preenche e envia seus dados em segundos. Você recebe tudo organizado no seu e-mail. Sem barreira nenhuma.</p>
       </div>
       <div class="benefit-card reveal delay-4">
         <div class="card-icon"><svg class="icon-svg"><use href="#i-award"/></svg></div>
@@ -1107,7 +1166,7 @@ ul,ol{list-style:none}
       <div class="step-card reveal">
         <div class="step-number">1</div>
         <h3>Você nos conta sobre sua clínica</h3>
-        <p>Preencha um briefing rápido de 5 minutos que enviamos no seu e-mail: nome da clínica, serviços, diferenciais, fotos e o tom que prefere.</p>
+        <p>Após a compra, você recebe no e-mail um link para preencher um formulário rápido: nome da clínica, serviços, diferenciais, fotos e o tom que prefere.</p>
         <span class="step-time"><svg class="icon-svg sm"><use href="#i-clock"/></svg> 5 minutos</span>
       </div>
       <div class="step-card reveal delay-1">
@@ -1119,7 +1178,7 @@ ul,ol{list-style:none}
       <div class="step-card reveal delay-2">
         <div class="step-number">3</div>
         <h3>Pacientes começam a chegar</h3>
-        <p>Site no ar com hospedagem inclusa, pronto para receber tráfego do Google, Instagram e anúncios. Pacientes clicam e agendam direto com você.</p>
+        <p>Site no ar com hospedagem inclusa, pronto para receber tráfego do Google, Instagram e anúncios. Pacientes acessam e agendam direto pelo formulário.</p>
         <span class="step-time"><svg class="icon-svg sm"><use href="#i-rocket"/></svg> Resultado imediato</span>
       </div>
     </div>
@@ -1227,7 +1286,7 @@ ul,ol{list-style:none}
         <span class="item-price">R$500</span>
       </div>
       <div class="stack-item">
-        <span class="item-label"><svg class="icon-svg sm"><use href="#i-message-circle"/></svg> Formulário de agendamento integrado</span>
+        <span class="item-label"><svg class="icon-svg sm"><use href="#i-send"/></svg> Formulário de agendamento integrado</span>
         <span class="item-price">R$200</span>
       </div>
       <div class="stack-item">
@@ -1274,7 +1333,7 @@ ul,ol{list-style:none}
     </div>
 
     <div class="oferta-cta reveal">
-      <a href="#oferta" class="btn-primary btn-large btn-on-dark btn-pulse" id="main-cta">
+      <a href="https://pay.kiwify.com.br/ulVlbSo" class="btn-primary btn-large btn-on-dark btn-pulse" id="main-cta">
         <svg class="icon-svg"><use href="#i-arrow-right"/></svg>
         QUERO MEU SITE AGORA
       </a>
@@ -1291,6 +1350,8 @@ ul,ol{list-style:none}
         <p>Se em 30 dias você não ficar 100% satisfeito com seu site, devolvemos cada centavo. Sem perguntas, sem burocracia. O risco é todo nosso.</p>
       </div>
     </div>
+
+    <p class="hosting-note">O site é publicado em um subdomínio gerado automaticamente pela plataforma (ex: abc12x.dentalconvert.com). Caso deseje utilizar um domínio personalizado (suaclinica.com.br), você pode adquiri-lo por conta própria e fazemos o apontamento sem custo adicional.</p>
   </div>
 </section>
 
@@ -1319,7 +1380,7 @@ ul,ol{list-style:none}
             <span class="faq-toggle"><svg class="icon-svg sm"><use href="#i-plus"/></svg></span>
           </div>
           <div class="faq-answer">
-            <div class="faq-answer-inner">Zero. Nós cuidamos de absolutamente tudo: design, textos, hospedagem e publicação. Você só precisa preencher um briefing rápido de 5 minutos.</div>
+            <div class="faq-answer-inner">Zero. Nós cuidamos de absolutamente tudo: design, textos, hospedagem e publicação. Você só precisa preencher um formulário rápido de 5 minutos que enviamos no seu e-mail.</div>
           </div>
         </div>
         <div class="faq-item reveal delay-1">
@@ -1355,7 +1416,7 @@ ul,ol{list-style:none}
             <span class="faq-toggle"><svg class="icon-svg sm"><use href="#i-plus"/></svg></span>
           </div>
           <div class="faq-answer">
-            <div class="faq-answer-inner">A hospedagem está inclusa no valor. Seu site fica no ar com um subdomínio gerado automaticamente pela nossa plataforma (ex: abc123.nossaplataforma.com). Caso deseje utilizar um domínio personalizado (suaclinica.com.br), você pode adquiri-lo por conta própria e nós fazemos o apontamento sem custo adicional.</div>
+            <div class="faq-answer-inner">A hospedagem está inclusa no valor. Seu site fica no ar com um subdomínio gerado automaticamente pela nossa plataforma (ex: abc12x.dentalconvert.com). Caso deseje utilizar um domínio personalizado (suaclinica.com.br), você pode adquiri-lo por conta própria e nós fazemos o apontamento sem custo adicional.</div>
           </div>
         </div>
         <div class="faq-item reveal delay-3">
@@ -1374,6 +1435,15 @@ ul,ol{list-style:none}
           </div>
           <div class="faq-answer">
             <div class="faq-answer-inner">Com certeza — é exatamente pra isso que ele foi projetado. Em vez de mandar tráfego pro Instagram, você manda pro seu site de conversão e multiplica seus resultados. Inclusive, enviamos um guia bônus de como configurar seus anúncios.</div>
+          </div>
+        </div>
+        <div class="faq-item reveal delay-4">
+          <div class="faq-question">
+            <span>Como recebo o briefing para preencher?</span>
+            <span class="faq-toggle"><svg class="icon-svg sm"><use href="#i-plus"/></svg></span>
+          </div>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">Após a confirmação do pagamento, você recebe no e-mail cadastrado um link para um formulário online. É rápido, leva cerca de 5 minutos, e nele você nos conta tudo que precisamos para criar o seu site: dados da clínica, serviços, fotos e preferências visuais.</div>
           </div>
         </div>
       </div>
@@ -1395,7 +1465,7 @@ ul,ol{list-style:none}
     </div>
     <h2 class="section-title reveal">Enquanto você espera, seu concorrente está agendando pacientes online</h2>
     <p class="section-subtitle reveal">Cada dia sem um site profissional é dinheiro que escoa da sua clínica. Faça o investimento mais inteligente do ano pela sua prática.</p>
-    <a href="#oferta" class="btn-primary btn-large btn-on-dark btn-pulse reveal">
+    <a href="https://pay.kiwify.com.br/ulVlbSo" class="btn-primary btn-large btn-on-dark btn-pulse reveal">
       <svg class="icon-svg"><use href="#i-arrow-right"/></svg>
       Garantir Meu Site por R$497
     </a>
@@ -1419,8 +1489,8 @@ ul,ol{list-style:none}
 </footer>
 
 <!-- CTA FLUTUANTE -->
-<a href="#oferta" class="cta-float" id="cta-float">
-  <svg class="icon-svg"><use href="#i-mail"/></svg>
+<a href="https://pay.kiwify.com.br/ulVlbSo" class="cta-float" id="cta-float">
+  <svg class="icon-svg"><use href="#i-send"/></svg>
   Solicitar Meu Site
 </a>
 
@@ -1497,6 +1567,60 @@ const floatObserver = new IntersectionObserver((entries) => {
 }, { threshold: 0.3 });
 floatObserver.observe(heroSection);
 ctaFloat.style.transition = 'opacity 0.4s ease, transform 0.4s ease';
+
+// ========== COUNT-UP ANIMATION ==========
+const countElements = document.querySelectorAll('.count-up');
+const countObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      const el = entry.target;
+      const target = parseInt(el.dataset.target);
+      let current = 0;
+      const increment = Math.ceil(target / 40);
+      const timer = setInterval(() => {
+        current += increment;
+        if (current >= target) {
+          current = target;
+          clearInterval(timer);
+        }
+        el.textContent = current;
+      }, 30);
+      countObserver.unobserve(el);
+    }
+  });
+}, { threshold: 0.5 });
+countElements.forEach(el => countObserver.observe(el));
+
+// ========== PARALLAX DEPTH EFFECT (Desktop only) ==========
+if (window.matchMedia('(min-width: 1024px)').matches) {
+  const depthLayers = document.querySelectorAll('.depth-layer');
+  window.addEventListener('mousemove', (e) => {
+    const x = (e.clientX / window.innerWidth - 0.5) * 2;
+    const y = (e.clientY / window.innerHeight - 0.5) * 2;
+    depthLayers.forEach(layer => {
+      const depth = parseFloat(layer.dataset.depth) || 0.02;
+      const moveX = x * depth * 100;
+      const moveY = y * depth * 100;
+      layer.style.transform = `translate(${moveX}px, ${moveY}px)`;
+    });
+  }, { passive: true });
+}
+
+// ========== STAGGER ANIMATION FOR GRID ITEMS ==========
+const staggerObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      const cards = entry.target.querySelectorAll('.benefit-card, .pain-card, .testimonial-card, .step-card');
+      cards.forEach((card, i) => {
+        card.style.animationDelay = `${i * 0.08}s`;
+      });
+      staggerObserver.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.1 });
+document.querySelectorAll('.benefit-grid, .pain-grid, .testimonials-grid, .steps-wrapper').forEach(grid => {
+  staggerObserver.observe(grid);
+});
 </script>
 
 </body>
