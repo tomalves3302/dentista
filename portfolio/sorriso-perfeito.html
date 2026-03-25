@@ -1,0 +1,1554 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Clinica Sorriso Perfeito | Especialistas em Implantes Dentarios - BH</title>
+<meta name="description" content="Clinica especializada em implantes dentarios em Belo Horizonte. Tecnologia 3D, profissionais experientes e atendimento premium.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  --gold: #c9a84c;
+  --gold-light: #dfc06a;
+  --gold-dark: #a8893a;
+  --navy: #0a0e1a;
+  --navy-light: #111627;
+  --navy-lighter: #181d30;
+  --text-primary: #f0ece4;
+  --text-secondary: #9a97a0;
+  --text-muted: #6b6774;
+  --glass-bg: rgba(10, 14, 26, 0.75);
+  --glass-border: rgba(201, 168, 76, 0.12);
+  --card-bg: rgba(24, 29, 48, 0.6);
+  --radius: 12px;
+  --radius-lg: 20px;
+  --transition: 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: var(--navy);
+  color: var(--text-primary);
+  line-height: 1.6;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6 { font-family: 'Outfit', sans-serif; line-height: 1.15; }
+
+a { text-decoration: none; color: inherit; }
+ul { list-style: none; }
+img { max-width: 100%; display: block; }
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* ===== SVG Icon Definitions (hidden) ===== */
+.svg-defs { position: absolute; width: 0; height: 0; overflow: hidden; }
+
+/* ===== Demo Banner ===== */
+.demo-banner {
+  background: linear-gradient(90deg, var(--gold-dark), var(--gold), var(--gold-dark));
+  color: var(--navy);
+  text-align: center;
+  padding: 8px 16px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  font-family: 'Inter', sans-serif;
+  letter-spacing: 0.03em;
+  position: relative;
+  z-index: 1001;
+}
+
+/* ===== Navbar ===== */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  padding: 0;
+  transition: var(--transition);
+}
+
+.navbar.scrolled .navbar-inner {
+  background: rgba(10, 14, 26, 0.92);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--glass-border);
+}
+
+.navbar-inner {
+  transition: var(--transition);
+  border-bottom: 1px solid transparent;
+}
+
+.navbar .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 72px;
+}
+
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: 'Outfit', sans-serif;
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: var(--text-primary);
+}
+
+.navbar-logo svg { flex-shrink: 0; }
+
+.navbar-logo span { color: var(--gold); }
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.nav-links a {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  transition: color var(--transition);
+  position: relative;
+}
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--gold);
+  transition: width var(--transition);
+}
+
+.nav-links a:hover { color: var(--gold); }
+.nav-links a:hover::after { width: 100%; }
+
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 28px;
+  background: linear-gradient(135deg, var(--gold), var(--gold-dark));
+  color: var(--navy);
+  font-family: 'Outfit', sans-serif;
+  font-weight: 600;
+  font-size: 0.95rem;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: var(--transition);
+  text-transform: none;
+  letter-spacing: 0.01em;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(201, 168, 76, 0.3);
+}
+
+.btn-outline {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 28px;
+  background: transparent;
+  color: var(--gold);
+  font-family: 'Outfit', sans-serif;
+  font-weight: 600;
+  font-size: 0.95rem;
+  border: 2px solid var(--gold);
+  border-radius: 50px;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.btn-outline:hover {
+  background: rgba(201, 168, 76, 0.1);
+  transform: translateY(-2px);
+}
+
+.mobile-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+}
+
+.mobile-toggle span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: var(--text-primary);
+  transition: var(--transition);
+  border-radius: 2px;
+}
+
+/* ===== Hero ===== */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding-top: 72px;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: -200px;
+  right: -200px;
+  width: 700px;
+  height: 700px;
+  background: radial-gradient(circle, rgba(201, 168, 76, 0.06) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.hero .container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.hero-content { z-index: 2; }
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 18px;
+  background: rgba(201, 168, 76, 0.1);
+  border: 1px solid rgba(201, 168, 76, 0.2);
+  border-radius: 50px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--gold);
+  margin-bottom: 28px;
+}
+
+.hero-badge svg { flex-shrink: 0; }
+
+.hero-title {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 800;
+  color: var(--text-primary);
+  margin-bottom: 20px;
+  letter-spacing: -0.02em;
+}
+
+.hero-title .gold { color: var(--gold); }
+
+.hero-subtitle {
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+  margin-bottom: 36px;
+  max-width: 520px;
+  line-height: 1.7;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.hero-visual {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 500px;
+}
+
+.visual-ring {
+  position: absolute;
+  border-radius: 50%;
+  border: 1px solid rgba(201, 168, 76, 0.15);
+  animation: floatRing 8s ease-in-out infinite;
+}
+
+.visual-ring:nth-child(1) {
+  width: 350px;
+  height: 350px;
+  border-color: rgba(201, 168, 76, 0.12);
+  animation-delay: 0s;
+}
+
+.visual-ring:nth-child(2) {
+  width: 280px;
+  height: 280px;
+  border-color: rgba(201, 168, 76, 0.18);
+  animation-delay: -2s;
+  animation-duration: 6s;
+}
+
+.visual-ring:nth-child(3) {
+  width: 200px;
+  height: 200px;
+  border-color: rgba(201, 168, 76, 0.25);
+  animation-delay: -4s;
+  animation-duration: 7s;
+}
+
+.visual-center {
+  position: relative;
+  width: 140px;
+  height: 140px;
+  background: linear-gradient(135deg, rgba(201, 168, 76, 0.15), rgba(201, 168, 76, 0.05));
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  border: 1px solid rgba(201, 168, 76, 0.25);
+}
+
+.visual-center svg { opacity: 0.9; }
+
+.visual-dot {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background: var(--gold);
+  border-radius: 50%;
+  opacity: 0.5;
+  animation: floatDot 5s ease-in-out infinite;
+}
+
+.visual-dot:nth-child(5) { top: 15%; left: 20%; animation-delay: 0s; }
+.visual-dot:nth-child(6) { top: 25%; right: 15%; animation-delay: -1.5s; }
+.visual-dot:nth-child(7) { bottom: 20%; left: 10%; animation-delay: -3s; }
+.visual-dot:nth-child(8) { bottom: 30%; right: 20%; animation-delay: -2s; width: 6px; height: 6px; }
+.visual-dot:nth-child(9) { top: 45%; right: 5%; animation-delay: -4s; width: 5px; height: 5px; }
+
+.visual-line {
+  position: absolute;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(201, 168, 76, 0.2), transparent);
+  animation: floatLine 6s ease-in-out infinite;
+}
+
+.visual-line:nth-child(10) { width: 120px; top: 30%; left: 5%; transform: rotate(25deg); animation-delay: 0s; }
+.visual-line:nth-child(11) { width: 80px; bottom: 25%; right: 10%; transform: rotate(-15deg); animation-delay: -2s; }
+.visual-line:nth-child(12) { width: 100px; top: 55%; left: 15%; transform: rotate(45deg); animation-delay: -3.5s; }
+
+@keyframes floatRing {
+  0%, 100% { transform: scale(1) rotate(0deg); }
+  50% { transform: scale(1.04) rotate(3deg); }
+}
+
+@keyframes floatDot {
+  0%, 100% { transform: translateY(0); opacity: 0.5; }
+  50% { transform: translateY(-12px); opacity: 0.8; }
+}
+
+@keyframes floatLine {
+  0%, 100% { opacity: 0.3; }
+  50% { opacity: 0.7; }
+}
+
+/* ===== Stats Bar ===== */
+.stats-bar {
+  background: var(--navy-light);
+  border-top: 1px solid var(--glass-border);
+  border-bottom: 1px solid var(--glass-border);
+  padding: 48px 0;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px;
+  text-align: center;
+}
+
+.stat-item { padding: 8px 0; }
+
+.stat-number {
+  font-family: 'Outfit', sans-serif;
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--gold);
+  margin-bottom: 6px;
+}
+
+.stat-label {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  font-weight: 400;
+}
+
+/* ===== Section Defaults ===== */
+.section {
+  padding: 100px 0;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.section-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--gold);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  margin-bottom: 16px;
+}
+
+.section-title {
+  font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 16px;
+}
+
+.section-subtitle {
+  font-size: 1.05rem;
+  color: var(--text-secondary);
+  max-width: 560px;
+  margin: 0 auto;
+}
+
+/* ===== Services ===== */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.service-card {
+  background: var(--card-bg);
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  border-radius: var(--radius-lg);
+  padding: 36px 28px;
+  transition: var(--transition);
+  position: relative;
+  overflow: hidden;
+}
+
+.service-card::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--gold), var(--gold-light));
+  transform: scaleX(0);
+  transition: transform var(--transition);
+}
+
+.service-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+  border-color: rgba(201, 168, 76, 0.15);
+}
+
+.service-card:hover::after { transform: scaleX(1); }
+
+.service-icon {
+  width: 56px;
+  height: 56px;
+  background: rgba(201, 168, 76, 0.1);
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 24px;
+  border: 1px solid rgba(201, 168, 76, 0.15);
+}
+
+.service-icon svg { color: var(--gold); }
+
+.service-card h3 {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 12px;
+}
+
+.service-card p {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  line-height: 1.65;
+}
+
+/* ===== About / Differentials ===== */
+.about { background: var(--navy-light); }
+
+.about .container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+.about-content .section-tag { margin-bottom: 16px; }
+
+.about-title {
+  font-size: clamp(1.8rem, 3vw, 2.4rem);
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 20px;
+}
+
+.about-text {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  margin-bottom: 36px;
+  line-height: 1.7;
+}
+
+.diff-list { display: flex; flex-direction: column; gap: 24px; }
+
+.diff-item {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+.diff-icon {
+  width: 44px;
+  height: 44px;
+  min-width: 44px;
+  background: rgba(201, 168, 76, 0.1);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(201, 168, 76, 0.15);
+}
+
+.diff-icon svg { color: var(--gold); }
+
+.diff-item h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 4px;
+}
+
+.diff-item p {
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.about-visual {
+  position: relative;
+  height: 480px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-visual-shape {
+  width: 360px;
+  height: 360px;
+  border-radius: var(--radius-lg);
+  background: linear-gradient(135deg, rgba(201, 168, 76, 0.08), rgba(201, 168, 76, 0.02));
+  border: 1px solid rgba(201, 168, 76, 0.1);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: rotate(3deg);
+}
+
+.about-visual-shape::before {
+  content: '';
+  position: absolute;
+  inset: -20px;
+  border: 1px solid rgba(201, 168, 76, 0.06);
+  border-radius: var(--radius-lg);
+  transform: rotate(-6deg);
+}
+
+.about-visual-inner {
+  text-align: center;
+}
+
+.about-visual-inner .big-number {
+  font-family: 'Outfit', sans-serif;
+  font-size: 5rem;
+  font-weight: 800;
+  color: var(--gold);
+  line-height: 1;
+  margin-bottom: 8px;
+}
+
+.about-visual-inner .big-label {
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+}
+
+.floating-badge {
+  position: absolute;
+  background: var(--navy-lighter);
+  border: 1px solid rgba(201, 168, 76, 0.15);
+  border-radius: var(--radius);
+  padding: 14px 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  animation: floatBadge 5s ease-in-out infinite;
+}
+
+.floating-badge svg { color: var(--gold); flex-shrink: 0; }
+
+.floating-badge:nth-child(2) { top: 10%; right: 0; animation-delay: -1s; }
+.floating-badge:nth-child(3) { bottom: 10%; left: -10px; animation-delay: -2.5s; }
+
+@keyframes floatBadge {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+/* ===== Testimonials ===== */
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.testimonial-card {
+  background: var(--card-bg);
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  border-radius: var(--radius-lg);
+  padding: 36px 28px;
+  transition: var(--transition);
+}
+
+.testimonial-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.25);
+  border-color: rgba(201, 168, 76, 0.12);
+}
+
+.testimonial-stars {
+  display: flex;
+  gap: 3px;
+  margin-bottom: 20px;
+}
+
+.testimonial-stars svg { color: var(--gold); }
+
+.testimonial-text {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin-bottom: 24px;
+  font-style: italic;
+}
+
+.testimonial-author {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.testimonial-avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, rgba(201, 168, 76, 0.2), rgba(201, 168, 76, 0.08));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Outfit', sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--gold);
+  border: 1px solid rgba(201, 168, 76, 0.2);
+}
+
+.testimonial-name {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--text-primary);
+}
+
+.testimonial-procedure {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin-top: 2px;
+}
+
+/* ===== CTA Section ===== */
+.cta-section {
+  background: var(--navy-light);
+  padding: 100px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-section::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(201, 168, 76, 0.06) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.cta-content {
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+.cta-title {
+  font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 16px;
+}
+
+.cta-text {
+  font-size: 1.05rem;
+  color: var(--text-secondary);
+  margin-bottom: 40px;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.btn-whatsapp {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 32px;
+  background: #25d366;
+  color: #fff;
+  font-family: 'Outfit', sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.btn-whatsapp:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(37, 211, 102, 0.3);
+}
+
+.btn-phone {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 32px;
+  background: transparent;
+  color: var(--text-primary);
+  font-family: 'Outfit', sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  border: 2px solid rgba(255, 255, 255, 0.15);
+  border-radius: 50px;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.btn-phone:hover {
+  border-color: rgba(255, 255, 255, 0.3);
+  transform: translateY(-2px);
+}
+
+/* ===== Footer ===== */
+.footer {
+  background: var(--navy);
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  padding: 60px 0 30px;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 48px;
+  margin-bottom: 48px;
+}
+
+.footer-brand .navbar-logo { margin-bottom: 16px; }
+
+.footer-brand p {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  max-width: 320px;
+}
+
+.footer-col h4 {
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 20px;
+}
+
+.footer-col li {
+  margin-bottom: 12px;
+}
+
+.footer-col a {
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+  transition: color var(--transition);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.footer-col a:hover { color: var(--gold); }
+
+.footer-social {
+  display: flex;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.footer-social a {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition);
+}
+
+.footer-social a:hover {
+  background: rgba(201, 168, 76, 0.15);
+  border-color: rgba(201, 168, 76, 0.3);
+}
+
+.footer-social svg { color: var(--text-secondary); transition: color var(--transition); }
+.footer-social a:hover svg { color: var(--gold); }
+
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  padding-top: 24px;
+  text-align: center;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+/* ===== Reveal Animations ===== */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-delay-1 { transition-delay: 0.1s; }
+.reveal-delay-2 { transition-delay: 0.2s; }
+.reveal-delay-3 { transition-delay: 0.3s; }
+.reveal-delay-4 { transition-delay: 0.4s; }
+
+/* ===== Mobile Nav ===== */
+.mobile-menu {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(10, 14, 26, 0.97);
+  backdrop-filter: blur(20px);
+  z-index: 999;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.mobile-menu.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.mobile-menu a {
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  transition: color var(--transition);
+}
+
+.mobile-menu a:hover { color: var(--gold); }
+
+.mobile-close {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--text-primary);
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 1024px) {
+  .services-grid { grid-template-columns: repeat(2, 1fr); }
+  .stats-grid { grid-template-columns: repeat(2, 1fr); gap: 24px; }
+  .about .container { grid-template-columns: 1fr; gap: 48px; }
+  .about-visual { height: 360px; }
+  .footer-grid { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 768px) {
+  .hero .container { grid-template-columns: 1fr; gap: 40px; text-align: left; }
+  .hero-visual { height: 300px; }
+  .nav-links { display: none; }
+  .mobile-toggle { display: flex; }
+  .mobile-menu { display: flex; }
+  .testimonials-grid { grid-template-columns: 1fr; }
+  .services-grid { grid-template-columns: 1fr; }
+  .stats-grid { grid-template-columns: repeat(2, 1fr); }
+  .footer-grid { grid-template-columns: 1fr; gap: 32px; }
+  .section { padding: 72px 0; }
+  .cta-section { padding: 72px 0; }
+  .navbar .container { height: 64px; }
+  .hero { padding-top: 64px; }
+}
+
+@media (max-width: 480px) {
+  .container { padding: 0 16px; }
+  .hero-buttons { flex-direction: column; }
+  .hero-buttons .btn-primary,
+  .hero-buttons .btn-outline { width: 100%; justify-content: center; }
+  .cta-buttons { flex-direction: column; align-items: center; }
+  .cta-buttons .btn-whatsapp,
+  .cta-buttons .btn-phone { width: 100%; justify-content: center; }
+  .stat-number { font-size: 2rem; }
+}
+</style>
+</head>
+<body>
+
+<!-- Demo Banner -->
+<div class="demo-banner">
+  Este e um site demonstrativo criado por DentalConvert
+</div>
+
+<!-- Navbar -->
+<nav class="navbar" id="navbar">
+  <div class="navbar-inner">
+    <div class="container">
+      <a href="#" class="navbar-logo">
+        <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+          <path d="M16 3C12.5 3 10 5 9 7C7.5 5.5 5.5 5 4 6C2 7.5 2 10 3 12C4.5 15 7 19 10 23C12 26 14 29 16 29C18 29 20 26 22 23C25 19 27.5 15 29 12C30 10 30 7.5 28 6C26.5 5 24.5 5.5 23 7C22 5 19.5 3 16 3Z" fill="url(#toothGrad)"/>
+          <defs>
+            <linearGradient id="toothGrad" x1="4" y1="3" x2="28" y2="29" gradientUnits="userSpaceOnUse">
+              <stop stop-color="#c9a84c"/>
+              <stop offset="1" stop-color="#a8893a"/>
+            </linearGradient>
+          </defs>
+        </svg>
+        Sorriso <span>Perfeito</span>
+      </a>
+
+      <div class="nav-links">
+        <a href="#servicos">Servicos</a>
+        <a href="#sobre">Sobre</a>
+        <a href="#depoimentos">Depoimentos</a>
+        <a href="#contato">Contato</a>
+        <a href="#" class="btn-primary">Agendar Consulta</a>
+      </div>
+
+      <button class="mobile-toggle" id="mobileToggle" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- Mobile Menu -->
+<div class="mobile-menu" id="mobileMenu">
+  <button class="mobile-close" id="mobileClose" aria-label="Fechar menu">
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+  </button>
+  <a href="#servicos" class="mobile-link">Servicos</a>
+  <a href="#sobre" class="mobile-link">Sobre</a>
+  <a href="#depoimentos" class="mobile-link">Depoimentos</a>
+  <a href="#contato" class="mobile-link">Contato</a>
+  <a href="#" class="btn-primary">Agendar Consulta</a>
+</div>
+
+<!-- Hero -->
+<section class="hero" id="inicio">
+  <div class="container">
+    <div class="hero-content">
+      <div class="hero-badge reveal">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>
+        </svg>
+        Referencia em Implantes em BH
+      </div>
+      <h1 class="hero-title reveal">
+        Especialistas em<br><span class="gold">Implantes Dentarios</span>
+      </h1>
+      <p class="hero-subtitle reveal">
+        Recupere seu sorriso com implantes de alta qualidade. Utilizamos tecnologia de ponta e tecnicas avancadas para resultados naturais e duradouros.
+      </p>
+      <div class="hero-buttons reveal">
+        <a href="#" class="btn-primary">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/>
+          </svg>
+          Agendar Avaliacao Gratuita
+        </a>
+        <a href="#servicos" class="btn-outline">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+            <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
+          </svg>
+          Conhecer Servicos
+        </a>
+      </div>
+    </div>
+    <div class="hero-visual reveal">
+      <div class="visual-ring"></div>
+      <div class="visual-ring"></div>
+      <div class="visual-ring"></div>
+      <div class="visual-center">
+        <svg width="64" height="64" viewBox="0 0 64 64" fill="none">
+          <path d="M32 8C25 8 20 12 18 16C15 12 11 11 8 13C4 16 4 22 6 26C9 32 14 40 20 48C24 54 28 58 32 58C36 58 40 54 44 48C50 40 55 32 58 26C60 22 60 16 56 13C53 11 49 12 46 16C44 12 39 8 32 8Z" stroke="#c9a84c" stroke-width="1.5" fill="none" opacity="0.6"/>
+          <path d="M32 18C28 18 25 20.5 24 23C22.5 21 20 20.5 18.5 21.5C16.5 23 16.5 26 17.5 28.5C19 32 21.5 36 25 41C27 44 29.5 47 32 47C34.5 47 37 44 39 41C42.5 36 45 32 46.5 28.5C47.5 26 47.5 23 45.5 21.5C44 20.5 41.5 21 40 23C39 20.5 36 18 32 18Z" fill="#c9a84c" opacity="0.25"/>
+        </svg>
+      </div>
+      <div class="visual-dot"></div>
+      <div class="visual-dot"></div>
+      <div class="visual-dot"></div>
+      <div class="visual-dot"></div>
+      <div class="visual-dot"></div>
+      <div class="visual-line"></div>
+      <div class="visual-line"></div>
+      <div class="visual-line"></div>
+    </div>
+  </div>
+</section>
+
+<!-- Stats Bar -->
+<section class="stats-bar">
+  <div class="container">
+    <div class="stats-grid">
+      <div class="stat-item reveal">
+        <div class="stat-number" data-target="2500" data-prefix="+">0</div>
+        <div class="stat-label">Implantes realizados</div>
+      </div>
+      <div class="stat-item reveal reveal-delay-1">
+        <div class="stat-number" data-target="15" data-suffix=" anos">0</div>
+        <div class="stat-label">De experiencia</div>
+      </div>
+      <div class="stat-item reveal reveal-delay-2">
+        <div class="stat-number" data-target="98" data-suffix="%">0</div>
+        <div class="stat-label">De satisfacao</div>
+      </div>
+      <div class="stat-item reveal reveal-delay-3">
+        <div class="stat-number" data-target="100" data-suffix="%">0</div>
+        <div class="stat-label">Tecnologia 3D</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Services -->
+<section class="section" id="servicos">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-tag reveal">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg>
+        Nossos Servicos
+      </div>
+      <h2 class="section-title reveal">Tratamentos Especializados</h2>
+      <p class="section-subtitle reveal">Oferecemos as melhores solucoes em implantes dentarios com tecnologia de ultima geracao.</p>
+    </div>
+
+    <div class="services-grid">
+      <!-- Card 1 -->
+      <div class="service-card reveal">
+        <div class="service-icon">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+            <path d="M12 2C9.5 2 7.5 3.5 7 5.5C5.5 4.5 3.5 4.5 2.5 5.5C1 7 1.5 9 2.5 11C4 14 6 17 8.5 20.5C10 23 11.5 24 12 24C12.5 24 14 23 15.5 20.5C18 17 20 14 21.5 11C22.5 9 23 7 21.5 5.5C20.5 4.5 18.5 4.5 17 5.5C16.5 3.5 14.5 2 12 2Z"/>
+            <line x1="12" y1="10" x2="12" y2="16"/>
+          </svg>
+        </div>
+        <h3>Implante Unitario</h3>
+        <p>Reposicao de um unico dente com pino de titanio biocompativel e coroa em porcelana de alta estetica.</p>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="service-card reveal reveal-delay-1">
+        <div class="service-icon">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+            <path d="M4 4C3 6 3 8 4 10C5.5 13 7 15 9 18C10 20 11 21 12 21C13 21 14 20 15 18C17 15 18.5 13 20 10C21 8 21 6 20 4"/>
+            <line x1="4" y1="4" x2="20" y2="4"/>
+            <line x1="7" y1="4" x2="7" y2="8"/>
+            <line x1="12" y1="4" x2="12" y2="8"/>
+            <line x1="17" y1="4" x2="17" y2="8"/>
+            <line x1="9.5" y1="4" x2="9.5" y2="7"/>
+          </svg>
+        </div>
+        <h3>Protocolo All-on-4</h3>
+        <p>Protese fixa total sobre apenas 4 implantes. Solucao completa para quem perdeu todos os dentes.</p>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="service-card reveal reveal-delay-2">
+        <div class="service-icon">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+            <rect x="3" y="3" width="18" height="18" rx="3"/>
+            <path d="M8 12C8 9 10 7 12 7C14 7 16 9 16 12"/>
+            <path d="M6 16C7 14 9 13 12 13C15 13 17 14 18 16"/>
+            <circle cx="12" cy="10" r="1.5" fill="currentColor" stroke="none"/>
+          </svg>
+        </div>
+        <h3>Enxerto Osseo</h3>
+        <p>Reconstrucao ossea para pacientes com volume insuficiente, preparando a regiao para receber implantes.</p>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="service-card reveal reveal-delay-3">
+        <div class="service-icon">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+            <path d="M8 2C6 2 4.5 3.5 4 5C3 3.5 1.5 3.5 1 4.5C0 6 0.5 8 1.5 10C3 13 4.5 15 6.5 18.5C7.5 20 8 21 8 21"/>
+            <path d="M16 2C18 2 19.5 3.5 20 5C21 3.5 22.5 3.5 23 4.5C24 6 23.5 8 22.5 10C21 13 19.5 15 17.5 18.5C16.5 20 16 21 16 21"/>
+            <path d="M8 21C10 21 14 21 16 21"/>
+            <path d="M9 12H15" stroke-dasharray="2 2"/>
+          </svg>
+        </div>
+        <h3>Protese sobre Implante</h3>
+        <p>Proteses fixas ou removiveis apoiadas em implantes para reabilitacao funcional e estetica completa.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- About / Differentials -->
+<section class="about section" id="sobre">
+  <div class="container">
+    <div class="about-content">
+      <div class="section-tag reveal">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+        Nossos Diferenciais
+      </div>
+      <h2 class="about-title reveal">Por que escolher a<br>Sorriso Perfeito?</h2>
+      <p class="about-text reveal">Somos referencia em implantodontia em Belo Horizonte, combinando experiencia clinica com as mais avancadas tecnologias do mercado.</p>
+
+      <div class="diff-list">
+        <div class="diff-item reveal">
+          <div class="diff-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+              <rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/>
+            </svg>
+          </div>
+          <div>
+            <h4>Planejamento Digital 3D</h4>
+            <p>Cirurgia guiada por computador com precisao milimetrica e previsibilidade total do resultado.</p>
+          </div>
+        </div>
+        <div class="diff-item reveal reveal-delay-1">
+          <div class="diff-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+            </svg>
+          </div>
+          <div>
+            <h4>Equipe Multidisciplinar</h4>
+            <p>Especialistas em implantodontia, periodontia e protese trabalhando em conjunto para o seu caso.</p>
+          </div>
+        </div>
+        <div class="diff-item reveal reveal-delay-2">
+          <div class="diff-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+            </svg>
+          </div>
+          <div>
+            <h4>Implantes Premium</h4>
+            <p>Trabalhamos exclusivamente com marcas de implantes reconhecidas internacionalmente.</p>
+          </div>
+        </div>
+        <div class="diff-item reveal reveal-delay-3">
+          <div class="diff-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+              <circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/>
+            </svg>
+          </div>
+          <div>
+            <h4>Sedacao Consciente</h4>
+            <p>Procedimentos realizados com conforto total, sem dor e sem ansiedade para o paciente.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="about-visual reveal">
+      <div class="floating-badge">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+        Certificacao ISO 9001
+      </div>
+      <div class="floating-badge">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
+        Nota 4.9 no Google
+      </div>
+      <div class="about-visual-shape">
+        <div class="about-visual-inner">
+          <div class="big-number">15+</div>
+          <div class="big-label">Anos de Experiencia</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Testimonials -->
+<section class="section" id="depoimentos">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-tag reveal">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+        Depoimentos
+      </div>
+      <h2 class="section-title reveal">O que nossos pacientes dizem</h2>
+      <p class="section-subtitle reveal">A satisfacao dos nossos pacientes e o nosso maior orgulho e motivacao.</p>
+    </div>
+
+    <div class="testimonials-grid">
+      <div class="testimonial-card reveal">
+        <div class="testimonial-stars">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="#c9a84c" stroke="none"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="#c9a84c" stroke="none"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="#c9a84c" stroke="none"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="#c9a84c" stroke="none"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="#c9a84c" stroke="none"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
+        </div>
+        <p class="testimonial-text">"Fiz o protocolo All-on-4 e foi a melhor decisao da minha vida. A equipe me deixou super tranquila durante todo o processo. O resultado ficou natural e lindo."</p>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">MR</div>
+          <div>
+            <div class="testimonial-name">Maria Rita S.</div>
+            <div class="testimonial-procedure">Protocolo All-on-4</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card reveal reveal-delay-1">
+        <div class="testimonial-stars">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="#c9a84c" stroke="none"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="#c9a84c" stroke="none"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="#c9a84c" stroke="none"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="#c9a84c" stroke="none"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="#c9a84c" stroke="none"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
+        </div>
+        <p class="testimonial-text">"Tinha muito medo de dentista e implantes. A sedacao consciente fez toda a diferenca. Nao senti absolutamente nada. Em poucas semanas estava com meu dente novo."</p>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">CA</div>
+          <div>
+            <div class="testimonial-name">Carlos Alberto M.</div>
+            <div class="testimonial-procedure">Implante Unitario</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card reveal reveal-delay-2">
+        <div class="testimonial-stars">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="#c9a84c" stroke="none"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="#c9a84c" stroke="none"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="#c9a84c" stroke="none"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="#c9a84c" stroke="none"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="#c9a84c" stroke="none"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
+        </div>
+        <p class="testimonial-text">"Precisei de enxerto osseo antes do implante. O Dr. explicou tudo com clareza e paciencia. Hoje tenho meus implantes perfeitos e um sorriso que me da orgulho."</p>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">AF</div>
+          <div>
+            <div class="testimonial-name">Ana Flavia L.</div>
+            <div class="testimonial-procedure">Enxerto Osseo + Implante</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA Section -->
+<section class="cta-section" id="contato">
+  <div class="container">
+    <div class="cta-content">
+      <h2 class="cta-title reveal">Agende sua avaliacao<br><span style="color: var(--gold)">sem compromisso</span></h2>
+      <p class="cta-text reveal">Entre em contato conosco e de o primeiro passo para recuperar o seu sorriso. A primeira consulta e gratuita.</p>
+      <div class="cta-buttons reveal">
+        <a href="#" class="btn-whatsapp">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+          </svg>
+          WhatsApp
+        </a>
+        <a href="#" class="btn-phone">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+          </svg>
+          (31) 3333-4444
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="#" class="navbar-logo">
+          <svg width="28" height="28" viewBox="0 0 32 32" fill="none">
+            <path d="M16 3C12.5 3 10 5 9 7C7.5 5.5 5.5 5 4 6C2 7.5 2 10 3 12C4.5 15 7 19 10 23C12 26 14 29 16 29C18 29 20 26 22 23C25 19 27.5 15 29 12C30 10 30 7.5 28 6C26.5 5 24.5 5.5 23 7C22 5 19.5 3 16 3Z" fill="url(#toothGrad2)"/>
+            <defs>
+              <linearGradient id="toothGrad2" x1="4" y1="3" x2="28" y2="29" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#c9a84c"/>
+                <stop offset="1" stop-color="#a8893a"/>
+              </linearGradient>
+            </defs>
+          </svg>
+          Sorriso <span>Perfeito</span>
+        </a>
+        <p>Clinica especializada em implantes dentarios em Belo Horizonte. Transformando sorrisos com tecnologia e excelencia ha mais de 15 anos.</p>
+        <div class="footer-social">
+          <a href="#" aria-label="Instagram">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          </a>
+          <a href="#" aria-label="Facebook">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+          </a>
+          <a href="#" aria-label="YouTube">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19.1c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.43z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Contato</h4>
+        <ul>
+          <li>
+            <a href="#">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              Av. Afonso Pena, 1500 - Funcionarios, BH
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              (31) 3333-4444
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              contato@sorrisoperfeito.com.br
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Horario</h4>
+        <ul>
+          <li><a href="#">Seg - Sex: 8h as 18h</a></li>
+          <li><a href="#">Sabado: 8h as 12h</a></li>
+          <li><a href="#">Domingo: Fechado</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>Site demonstrativo criado por DentalConvert. Todos os dados sao ficticios.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+// ===== Navbar scroll effect =====
+const navbar = document.getElementById('navbar');
+const demoBanner = document.querySelector('.demo-banner');
+let bannerHeight = demoBanner ? demoBanner.offsetHeight : 0;
+
+function handleNavScroll() {
+  if (window.scrollY > 50) {
+    navbar.classList.add('scrolled');
+    navbar.style.top = '0';
+  } else {
+    navbar.classList.remove('scrolled');
+    navbar.style.top = bannerHeight + 'px';
+  }
+}
+
+// Set initial position
+navbar.style.top = bannerHeight + 'px';
+window.addEventListener('scroll', handleNavScroll, { passive: true });
+window.addEventListener('resize', function() {
+  bannerHeight = demoBanner ? demoBanner.offsetHeight : 0;
+  handleNavScroll();
+});
+
+// ===== Mobile Menu =====
+const mobileToggle = document.getElementById('mobileToggle');
+const mobileMenu = document.getElementById('mobileMenu');
+const mobileClose = document.getElementById('mobileClose');
+const mobileLinks = mobileMenu.querySelectorAll('.mobile-link');
+
+mobileToggle.addEventListener('click', function() {
+  mobileMenu.classList.add('active');
+  document.body.style.overflow = 'hidden';
+});
+
+function closeMobileMenu() {
+  mobileMenu.classList.remove('active');
+  document.body.style.overflow = '';
+}
+
+mobileClose.addEventListener('click', closeMobileMenu);
+mobileLinks.forEach(function(link) {
+  link.addEventListener('click', closeMobileMenu);
+});
+
+// ===== Scroll Reveal with IntersectionObserver =====
+const revealElements = document.querySelectorAll('.reveal');
+
+const revealObserver = new IntersectionObserver(function(entries) {
+  entries.forEach(function(entry) {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+      revealObserver.unobserve(entry.target);
+    }
+  });
+}, {
+  threshold: 0.12,
+  rootMargin: '0px 0px -40px 0px'
+});
+
+revealElements.forEach(function(el) {
+  revealObserver.observe(el);
+});
+
+// ===== Counter Animation =====
+const statNumbers = document.querySelectorAll('.stat-number[data-target]');
+let countersAnimated = false;
+
+const counterObserver = new IntersectionObserver(function(entries) {
+  entries.forEach(function(entry) {
+    if (entry.isIntersecting && !countersAnimated) {
+      countersAnimated = true;
+      animateCounters();
+      counterObserver.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.3 });
+
+if (statNumbers.length > 0) {
+  counterObserver.observe(statNumbers[0].closest('.stats-bar'));
+}
+
+function animateCounters() {
+  statNumbers.forEach(function(counter) {
+    var target = parseInt(counter.getAttribute('data-target'));
+    var prefix = counter.getAttribute('data-prefix') || '';
+    var suffix = counter.getAttribute('data-suffix') || '';
+    var duration = 2000;
+    var start = 0;
+    var startTime = null;
+
+    function easeOutQuart(t) {
+      return 1 - Math.pow(1 - t, 4);
+    }
+
+    function updateCounter(timestamp) {
+      if (!startTime) startTime = timestamp;
+      var progress = Math.min((timestamp - startTime) / duration, 1);
+      var easedProgress = easeOutQuart(progress);
+      var current = Math.floor(easedProgress * target);
+
+      counter.textContent = prefix + current.toLocaleString('pt-BR') + suffix;
+
+      if (progress < 1) {
+        requestAnimationFrame(updateCounter);
+      } else {
+        counter.textContent = prefix + target.toLocaleString('pt-BR') + suffix;
+      }
+    }
+
+    requestAnimationFrame(updateCounter);
+  });
+}
+
+// ===== Smooth scroll for anchor links =====
+document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
+  anchor.addEventListener('click', function(e) {
+    var href = this.getAttribute('href');
+    if (href === '#') return;
+    e.preventDefault();
+    var target = document.querySelector(href);
+    if (target) {
+      var navHeight = navbar.offsetHeight;
+      var targetPos = target.getBoundingClientRect().top + window.pageYOffset - navHeight;
+      window.scrollTo({ top: targetPos, behavior: 'smooth' });
+    }
+  });
+});
+</script>
+</body>
+</html>

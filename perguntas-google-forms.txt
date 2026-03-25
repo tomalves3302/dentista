@@ -1,0 +1,209 @@
+=====================================================
+BRIEFING — FORMULÁRIO GOOGLE FORMS
+Site Profissional para Clínicas Odontológicas
+=====================================================
+
+TÍTULO DO FORMULÁRIO:
+Briefing — Seu Site Profissional para Dentistas
+
+DESCRIÇÃO DO FORMULÁRIO:
+Preencha este formulário com as informações da sua clínica para que possamos criar o seu site de conversão. Leva cerca de 5 minutos. Quanto mais detalhado, melhor será o resultado.
+
+-----------------------------------------------------
+SEÇÃO 1: DADOS DA CLÍNICA
+-----------------------------------------------------
+
+1. Qual é o nome completo da sua clínica?
+   Tipo: Resposta curta (obrigatório)
+   Exemplo: "Clínica Sorriso Perfeito"
+
+2. Qual é o seu nome completo e título profissional?
+   Tipo: Resposta curta (obrigatório)
+   Exemplo: "Dr. João Silva — CRO 12345"
+
+3. Qual é o seu e-mail principal para contato?
+   Tipo: Resposta curta — validação de e-mail (obrigatório)
+
+4. Qual é o telefone/celular de contato da clínica?
+   Tipo: Resposta curta (obrigatório)
+
+5. Qual é o endereço completo da clínica? (Rua, número, bairro, cidade, estado)
+   Tipo: Parágrafo (obrigatório)
+
+6. Qual é o horário de funcionamento da clínica?
+   Tipo: Resposta curta (obrigatório)
+   Exemplo: "Seg a Sex: 8h às 18h | Sáb: 8h às 12h"
+
+-----------------------------------------------------
+SEÇÃO 2: ESPECIALIDADES E SERVIÇOS
+-----------------------------------------------------
+
+7. Qual é a sua especialidade principal?
+   Tipo: Lista suspensa (obrigatório)
+   Opções:
+   - Clínica Geral
+   - Ortodontia
+   - Implantodontia
+   - Estética Dental
+   - Endodontia
+   - Periodontia
+   - Odontopediatria
+   - Prótese Dentária
+   - Cirurgia Bucomaxilofacial
+   - Harmonização Orofacial
+   - Outra (especificar)
+
+8. Quais serviços/procedimentos sua clínica oferece? (Selecione todos que se aplicam)
+   Tipo: Caixas de seleção (obrigatório)
+   Opções:
+   - Limpeza e Profilaxia
+   - Clareamento Dental
+   - Restaurações
+   - Tratamento de Canal
+   - Implantes Dentários
+   - Aparelho Ortodôntico (fixo)
+   - Alinhadores Invisíveis
+   - Facetas e Lentes de Contato
+   - Próteses
+   - Extrações / Cirurgias
+   - Harmonização Orofacial (Botox, Preenchimento)
+   - Tratamento de Gengiva
+   - Odontopediatria
+   - Emergências Odontológicas
+   - Outro (especificar)
+
+9. Qual é o serviço que você mais deseja promover/destacar no site?
+   Tipo: Resposta curta (obrigatório)
+
+10. Você trabalha sozinho(a) ou tem uma equipe de dentistas na clínica?
+    Tipo: Múltipla escolha (obrigatório)
+    Opções:
+    - Trabalho sozinho(a)
+    - Tenho equipe (2 a 3 profissionais)
+    - Tenho equipe (4 ou mais profissionais)
+
+-----------------------------------------------------
+SEÇÃO 3: DIFERENCIAIS E POSICIONAMENTO
+-----------------------------------------------------
+
+11. O que diferencia a sua clínica dos concorrentes da região? (O que te torna especial?)
+    Tipo: Parágrafo (obrigatório)
+    Dica: "Ex: Atendimento humanizado, tecnologia de ponta, ambiente acolhedor, preços acessíveis, anos de experiência..."
+
+12. Você atende algum convênio/plano odontológico?
+    Tipo: Múltipla escolha (obrigatório)
+    Opções:
+    - Não, somente particular
+    - Sim (especificar quais no campo abaixo)
+
+13. Se sim, quais convênios/planos?
+    Tipo: Resposta curta (opcional)
+
+14. Qual é o perfil ideal do paciente que você quer atrair?
+    Tipo: Parágrafo (obrigatório)
+    Dica: "Ex: Adultos que buscam estética, famílias com crianças, pacientes de implantes, pessoas que querem aparelho..."
+
+-----------------------------------------------------
+SEÇÃO 4: PRESENÇA ONLINE ATUAL
+-----------------------------------------------------
+
+15. Sua clínica possui Instagram? Se sim, cole o link do perfil.
+    Tipo: Resposta curta (opcional)
+
+16. Sua clínica possui Google Meu Negócio (Google Maps)? Se sim, cole o link.
+    Tipo: Resposta curta (opcional)
+
+17. Você já possui algum site? Se sim, cole o link.
+    Tipo: Resposta curta (opcional)
+
+18. Você já roda anúncios pagos (Google Ads, Meta Ads)?
+    Tipo: Múltipla escolha (obrigatório)
+    Opções:
+    - Não, nunca anunciei
+    - Sim, anuncio atualmente
+    - Já anunciei no passado, mas parei
+
+-----------------------------------------------------
+SEÇÃO 5: IDENTIDADE VISUAL E PREFERÊNCIAS
+-----------------------------------------------------
+
+19. Sua clínica possui logotipo?
+    Tipo: Múltipla escolha (obrigatório)
+    Opções:
+    - Sim
+    - Não
+
+20. Envie o logotipo da clínica (formato PNG ou SVG de preferência)
+    Tipo: Upload de arquivo (opcional)
+
+21. Quais cores representam a sua clínica? (cores da logo, fachada, uniforme, etc.)
+    Tipo: Resposta curta (opcional)
+    Dica: "Ex: Azul e branco, verde-água, tons de dourado..."
+
+22. Qual estilo visual você prefere para o site?
+    Tipo: Múltipla escolha (obrigatório)
+    Opções:
+    - Moderno e minimalista
+    - Clean e profissional
+    - Luxuoso e sofisticado
+    - Acolhedor e familiar
+    - Não tenho preferência (confio na equipe)
+
+23. Existe algum site de dentista ou clínica que você admira e gostaria de usar como referência? Cole o link.
+    Tipo: Resposta curta (opcional)
+
+-----------------------------------------------------
+SEÇÃO 6: FOTOS E MATERIAIS
+-----------------------------------------------------
+
+24. Envie fotos da fachada, recepção e/ou consultório da clínica (até 10 fotos)
+    Tipo: Upload de arquivo (opcional)
+    Nota: "Fotos de boa qualidade fazem toda a diferença no resultado final."
+
+25. Envie sua foto profissional (e da equipe, se houver)
+    Tipo: Upload de arquivo (opcional)
+
+26. Possui fotos de antes/depois de procedimentos para usar no site?
+    Tipo: Múltipla escolha (obrigatório)
+    Opções:
+    - Sim, posso enviar
+    - Não possuo
+
+27. Se possui, envie as fotos de antes/depois aqui (até 6 pares)
+    Tipo: Upload de arquivo (opcional)
+
+-----------------------------------------------------
+SEÇÃO 7: CONCORRENTES
+-----------------------------------------------------
+
+28. Quais são os principais dentistas/clínicas concorrentes da sua região? (Nome e/ou link do site)
+    Tipo: Parágrafo (opcional)
+    Dica: "Isso nos ajuda na análise competitiva. Se não souber, pesquisamos por conta própria."
+
+29. Tem algo que seus concorrentes fazem que você gostaria de fazer melhor?
+    Tipo: Parágrafo (opcional)
+
+-----------------------------------------------------
+SEÇÃO 8: INFORMAÇÕES ADICIONAIS
+-----------------------------------------------------
+
+30. Tem alguma frase, slogan ou mensagem que gostaria que aparecesse no site?
+    Tipo: Resposta curta (opcional)
+
+31. Possui depoimentos de pacientes que possamos usar no site?
+    Tipo: Múltipla escolha (obrigatório)
+    Opções:
+    - Sim, posso fornecer
+    - Não possuo, podem usar genéricos por enquanto
+
+32. Tem algo mais que gostaria de nos contar ou algum pedido específico para o site?
+    Tipo: Parágrafo (opcional)
+
+=====================================================
+CONFIGURAÇÕES DO FORMULÁRIO:
+- Permitir upload de arquivos
+- Limitar a 1 resposta por e-mail
+- Enviar cópia da resposta ao respondente
+- Mensagem de confirmação:
+  "Briefing recebido com sucesso! Agora nosso time vai analisar suas informações e começar a criar o seu site. Você receberá uma prévia em até 25 horas. Obrigado!"
+=====================================================

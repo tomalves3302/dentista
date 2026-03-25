@@ -1,0 +1,2173 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dra. Marina Lopes | Ortodontista em Sao Paulo</title>
+    <meta name="description" content="Dra. Marina Lopes - Ortodontista especializada em Invisalign, Ortodontia Lingual e Aparelhos Esteticos. Agende sua consulta na Av. Paulista, Sao Paulo.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* ===== RESET & BASE ===== */
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --white: #ffffff;
+            --bg-light: #f0f5f3;
+            --bg-lighter: #e8f0ed;
+            --bg-card: #f7faf9;
+            --teal: #2a7d6e;
+            --teal-dark: #1f5f54;
+            --teal-light: #3a9d8a;
+            --teal-subtle: #d4e8e3;
+            --text-primary: #1a2e2a;
+            --text-secondary: #4a6660;
+            --text-muted: #7a9690;
+            --border: #d4ddd9;
+            --shadow-sm: 0 2px 8px rgba(42, 125, 110, 0.06);
+            --shadow-md: 0 4px 20px rgba(42, 125, 110, 0.08);
+            --shadow-lg: 0 8px 40px rgba(42, 125, 110, 0.12);
+            --shadow-hover: 0 12px 48px rgba(42, 125, 110, 0.16);
+            --radius-sm: 8px;
+            --radius-md: 12px;
+            --radius-lg: 20px;
+            --radius-xl: 28px;
+            --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        html {
+            scroll-behavior: smooth;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            color: var(--text-primary);
+            background: var(--white);
+            line-height: 1.7;
+            font-size: 16px;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Outfit', sans-serif;
+            line-height: 1.2;
+            font-weight: 600;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* ===== ANIMATIONS ===== */
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1), transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .reveal-left {
+            opacity: 0;
+            transform: translateX(-50px);
+            transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1), transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .reveal-left.visible {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .reveal-right {
+            opacity: 0;
+            transform: translateX(50px);
+            transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1), transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .reveal-right.visible {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .stagger-1 { transition-delay: 0.1s; }
+        .stagger-2 { transition-delay: 0.2s; }
+        .stagger-3 { transition-delay: 0.3s; }
+        .stagger-4 { transition-delay: 0.4s; }
+        .stagger-5 { transition-delay: 0.5s; }
+        .stagger-6 { transition-delay: 0.6s; }
+
+        /* ===== NAVIGATION ===== */
+        .nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.92);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid transparent;
+            transition: var(--transition);
+            padding: 16px 0;
+        }
+
+        .nav.scrolled {
+            border-bottom-color: var(--border);
+            box-shadow: var(--shadow-sm);
+            padding: 12px 0;
+        }
+
+        .nav-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .nav-brand {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--teal);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .nav-brand svg {
+            width: 32px;
+            height: 32px;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 32px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: var(--text-secondary);
+            transition: color var(--transition);
+            position: relative;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--teal);
+            border-radius: 1px;
+            transition: width var(--transition);
+        }
+
+        .nav-links a:hover {
+            color: var(--teal);
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .nav-cta {
+            background: var(--teal);
+            color: var(--white) !important;
+            padding: 10px 24px;
+            border-radius: 50px;
+            font-weight: 500;
+            font-size: 0.875rem;
+            transition: all var(--transition);
+        }
+
+        .nav-cta:hover {
+            background: var(--teal-dark);
+            transform: translateY(-1px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .nav-cta::after {
+            display: none !important;
+        }
+
+        .nav-mobile-toggle {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 8px;
+        }
+
+        .nav-mobile-toggle svg {
+            width: 24px;
+            height: 24px;
+            color: var(--text-primary);
+        }
+
+        /* ===== HERO ===== */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            background: linear-gradient(135deg, var(--white) 0%, var(--bg-light) 50%, var(--bg-lighter) 100%);
+            padding-top: 80px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 800px;
+            height: 800px;
+            background: radial-gradient(circle, rgba(42, 125, 110, 0.04) 0%, transparent 70%);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+
+        .hero-inner {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-content {
+            max-width: 560px;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--teal-subtle);
+            color: var(--teal);
+            padding: 8px 18px;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            margin-bottom: 28px;
+            opacity: 0;
+            animation: fadeInUp 0.8s 0.3s forwards;
+        }
+
+        .hero-badge svg {
+            width: 16px;
+            height: 16px;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 5vw, 3.75rem);
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 8px;
+            opacity: 0;
+            animation: fadeInUp 0.8s 0.5s forwards;
+        }
+
+        .hero h1 span {
+            color: var(--teal);
+        }
+
+        .hero-subtitle {
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            font-weight: 500;
+            margin-bottom: 20px;
+            opacity: 0;
+            animation: fadeInUp 0.8s 0.65s forwards;
+        }
+
+        .hero-tagline {
+            font-size: 1.25rem;
+            color: var(--text-secondary);
+            font-weight: 300;
+            line-height: 1.6;
+            margin-bottom: 40px;
+            opacity: 0;
+            animation: fadeInUp 0.8s 0.8s forwards;
+        }
+
+        .hero-actions {
+            display: flex;
+            gap: 16px;
+            align-items: center;
+            flex-wrap: wrap;
+            opacity: 0;
+            animation: fadeInUp 0.8s 0.95s forwards;
+        }
+
+        .btn-primary {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: var(--teal);
+            color: var(--white);
+            padding: 16px 36px;
+            border-radius: 50px;
+            font-family: 'Outfit', sans-serif;
+            font-size: 1rem;
+            font-weight: 600;
+            border: none;
+            cursor: pointer;
+            transition: all var(--transition);
+            box-shadow: 0 4px 16px rgba(42, 125, 110, 0.3);
+        }
+
+        .btn-primary:hover {
+            background: var(--teal-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 28px rgba(42, 125, 110, 0.4);
+        }
+
+        .btn-primary svg {
+            width: 18px;
+            height: 18px;
+        }
+
+        .btn-secondary {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: transparent;
+            color: var(--teal);
+            padding: 16px 28px;
+            border-radius: 50px;
+            font-family: 'Outfit', sans-serif;
+            font-size: 1rem;
+            font-weight: 500;
+            border: 2px solid var(--teal-subtle);
+            cursor: pointer;
+            transition: all var(--transition);
+        }
+
+        .btn-secondary:hover {
+            border-color: var(--teal);
+            background: var(--teal-subtle);
+        }
+
+        .btn-secondary svg {
+            width: 18px;
+            height: 18px;
+        }
+
+        /* Hero illustration */
+        .hero-visual {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 480px;
+            opacity: 0;
+            animation: fadeIn 1.2s 0.6s forwards;
+        }
+
+        .hero-shape-main {
+            width: 380px;
+            height: 380px;
+            border-radius: 52% 48% 44% 56% / 50% 46% 54% 50%;
+            background: linear-gradient(135deg, var(--teal-subtle) 0%, rgba(42, 125, 110, 0.12) 100%);
+            position: relative;
+            animation: morphShape 8s ease-in-out infinite;
+        }
+
+        .hero-shape-inner {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 280px;
+            height: 280px;
+            border-radius: 48% 52% 56% 44% / 54% 50% 50% 46%;
+            background: linear-gradient(135deg, rgba(42, 125, 110, 0.1) 0%, rgba(42, 125, 110, 0.2) 100%);
+            animation: morphShape 8s ease-in-out infinite reverse;
+        }
+
+        .hero-shape-icon {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .hero-shape-icon svg {
+            width: 120px;
+            height: 120px;
+            color: var(--teal);
+            opacity: 0.5;
+        }
+
+        .hero-float-1 {
+            position: absolute;
+            top: 20px;
+            right: 40px;
+            width: 60px;
+            height: 60px;
+            background: var(--white);
+            border-radius: 50%;
+            box-shadow: var(--shadow-md);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            animation: float 4s ease-in-out infinite;
+        }
+
+        .hero-float-1 svg {
+            width: 28px;
+            height: 28px;
+            color: var(--teal);
+        }
+
+        .hero-float-2 {
+            position: absolute;
+            bottom: 60px;
+            left: 20px;
+            width: 52px;
+            height: 52px;
+            background: var(--white);
+            border-radius: 50%;
+            box-shadow: var(--shadow-md);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            animation: float 5s ease-in-out 1s infinite;
+        }
+
+        .hero-float-2 svg {
+            width: 24px;
+            height: 24px;
+            color: var(--teal);
+        }
+
+        .hero-float-3 {
+            position: absolute;
+            top: 100px;
+            left: -10px;
+            width: 44px;
+            height: 44px;
+            background: var(--teal);
+            border-radius: 50%;
+            box-shadow: var(--shadow-md);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            animation: float 6s ease-in-out 0.5s infinite;
+        }
+
+        .hero-float-3 svg {
+            width: 20px;
+            height: 20px;
+            color: var(--white);
+        }
+
+        .hero-dots {
+            position: absolute;
+            bottom: 20px;
+            right: 0;
+            display: grid;
+            grid-template-columns: repeat(4, 8px);
+            gap: 10px;
+        }
+
+        .hero-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: var(--teal);
+            opacity: 0.15;
+        }
+
+        .hero-dot:nth-child(2) { opacity: 0.25; }
+        .hero-dot:nth-child(5) { opacity: 0.35; }
+        .hero-dot:nth-child(7) { opacity: 0.2; }
+        .hero-dot:nth-child(10) { opacity: 0.3; }
+        .hero-dot:nth-child(12) { opacity: 0.2; }
+
+        @keyframes morphShape {
+            0%, 100% { border-radius: 52% 48% 44% 56% / 50% 46% 54% 50%; }
+            25% { border-radius: 46% 54% 50% 50% / 56% 44% 56% 44%; }
+            50% { border-radius: 50% 50% 54% 46% / 44% 56% 44% 56%; }
+            75% { border-radius: 56% 44% 48% 52% / 50% 50% 46% 54%; }
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-14px); }
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        /* ===== SECTION COMMON ===== */
+        .section {
+            padding: 100px 0;
+        }
+
+        .section-header {
+            text-align: center;
+            max-width: 640px;
+            margin: 0 auto 60px;
+        }
+
+        .section-label {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-family: 'Outfit', sans-serif;
+            font-size: 0.8rem;
+            font-weight: 600;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: var(--teal);
+            margin-bottom: 16px;
+        }
+
+        .section-label svg {
+            width: 16px;
+            height: 16px;
+        }
+
+        .section-title {
+            font-size: clamp(1.75rem, 3.5vw, 2.5rem);
+            color: var(--text-primary);
+            margin-bottom: 16px;
+        }
+
+        .section-desc {
+            font-size: 1.05rem;
+            color: var(--text-muted);
+            line-height: 1.7;
+        }
+
+        /* ===== ABOUT ===== */
+        .about {
+            background: var(--white);
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 80px;
+            align-items: center;
+        }
+
+        .about-image-wrapper {
+            position: relative;
+        }
+
+        .about-image {
+            width: 100%;
+            aspect-ratio: 4 / 5;
+            border-radius: var(--radius-lg);
+            background: linear-gradient(135deg, var(--bg-lighter) 0%, var(--teal-subtle) 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .about-image-placeholder {
+            position: absolute;
+            inset: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 16px;
+        }
+
+        .about-image-placeholder svg {
+            width: 80px;
+            height: 80px;
+            color: var(--teal);
+            opacity: 0.3;
+        }
+
+        .about-image-placeholder span {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            font-weight: 500;
+        }
+
+        .about-image-accent {
+            position: absolute;
+            bottom: -20px;
+            right: -20px;
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            border: 3px solid var(--teal-subtle);
+            z-index: -1;
+        }
+
+        .about-content h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        .about-content h2 span {
+            color: var(--teal);
+        }
+
+        .about-text {
+            color: var(--text-secondary);
+            margin-bottom: 16px;
+            font-size: 1rem;
+        }
+
+        .about-credentials {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 28px;
+        }
+
+        .credential-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--bg-light);
+            color: var(--teal);
+            padding: 10px 20px;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            border: 1px solid var(--teal-subtle);
+            transition: all var(--transition);
+        }
+
+        .credential-tag:hover {
+            background: var(--teal);
+            color: var(--white);
+            border-color: var(--teal);
+        }
+
+        .credential-tag svg {
+            width: 16px;
+            height: 16px;
+        }
+
+        /* ===== TREATMENTS ===== */
+        .treatments {
+            background: var(--bg-light);
+        }
+
+        .treatments-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+
+        .treatment-card {
+            background: var(--white);
+            border-radius: var(--radius-md);
+            padding: 36px 28px;
+            border: 1px solid transparent;
+            transition: all var(--transition);
+            cursor: default;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .treatment-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: var(--teal);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform var(--transition);
+        }
+
+        .treatment-card:hover {
+            border-color: var(--teal-subtle);
+            box-shadow: var(--shadow-hover);
+            transform: translateY(-6px);
+        }
+
+        .treatment-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .treatment-icon {
+            width: 56px;
+            height: 56px;
+            border-radius: var(--radius-sm);
+            background: var(--bg-light);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            transition: all var(--transition);
+        }
+
+        .treatment-card:hover .treatment-icon {
+            background: var(--teal);
+        }
+
+        .treatment-icon svg {
+            width: 28px;
+            height: 28px;
+            color: var(--teal);
+            transition: color var(--transition);
+        }
+
+        .treatment-card:hover .treatment-icon svg {
+            color: var(--white);
+        }
+
+        .treatment-card h3 {
+            font-size: 1.15rem;
+            margin-bottom: 10px;
+            color: var(--text-primary);
+        }
+
+        .treatment-card p {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            line-height: 1.6;
+        }
+
+        /* ===== STATS ===== */
+        .stats {
+            background: linear-gradient(135deg, var(--teal) 0%, var(--teal-dark) 100%);
+            padding: 80px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .stats::before {
+            content: '';
+            position: absolute;
+            top: -100px;
+            right: -100px;
+            width: 400px;
+            height: 400px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.03);
+        }
+
+        .stats::after {
+            content: '';
+            position: absolute;
+            bottom: -80px;
+            left: -80px;
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.03);
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 40px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-family: 'Outfit', sans-serif;
+            font-size: clamp(2.25rem, 4vw, 3rem);
+            font-weight: 700;
+            color: var(--white);
+            line-height: 1.1;
+            margin-bottom: 8px;
+        }
+
+        .stat-number .prefix {
+            font-size: 0.7em;
+            font-weight: 500;
+        }
+
+        .stat-label {
+            font-size: 0.95rem;
+            color: rgba(255, 255, 255, 0.75);
+            font-weight: 400;
+        }
+
+        .stat-divider {
+            width: 40px;
+            height: 2px;
+            background: rgba(255, 255, 255, 0.2);
+            margin: 12px auto 0;
+            border-radius: 1px;
+        }
+
+        /* ===== TESTIMONIALS ===== */
+        .testimonials {
+            background: var(--white);
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 28px;
+        }
+
+        .testimonial-card {
+            background: var(--bg-card);
+            border-radius: var(--radius-md);
+            padding: 36px 28px;
+            border: 1px solid var(--border);
+            transition: all var(--transition);
+            position: relative;
+        }
+
+        .testimonial-card:hover {
+            border-color: var(--teal-subtle);
+            box-shadow: var(--shadow-md);
+            transform: translateY(-4px);
+        }
+
+        .testimonial-stars {
+            display: flex;
+            gap: 4px;
+            margin-bottom: 20px;
+        }
+
+        .testimonial-stars svg {
+            width: 18px;
+            height: 18px;
+            color: #f0b429;
+            fill: #f0b429;
+        }
+
+        .testimonial-quote {
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+            line-height: 1.7;
+            margin-bottom: 24px;
+            font-style: italic;
+        }
+
+        .testimonial-quote::before {
+            content: '';
+            display: block;
+            width: 32px;
+            height: 2px;
+            background: var(--teal);
+            margin-bottom: 16px;
+            border-radius: 1px;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+
+        .testimonial-avatar {
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            background: var(--teal-subtle);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Outfit', sans-serif;
+            font-weight: 600;
+            font-size: 1rem;
+            color: var(--teal);
+            flex-shrink: 0;
+        }
+
+        .testimonial-author-info h4 {
+            font-size: 0.95rem;
+            font-weight: 600;
+        }
+
+        .testimonial-author-info span {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+        }
+
+        /* ===== INSTAGRAM ===== */
+        .instagram {
+            background: var(--bg-light);
+        }
+
+        .instagram-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .instagram-handle {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--teal);
+            margin-top: 8px;
+        }
+
+        .instagram-handle svg {
+            width: 22px;
+            height: 22px;
+        }
+
+        .instagram-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 16px;
+        }
+
+        .instagram-post {
+            aspect-ratio: 1;
+            border-radius: var(--radius-sm);
+            overflow: hidden;
+            position: relative;
+            cursor: pointer;
+            transition: all var(--transition);
+        }
+
+        .instagram-post:hover {
+            transform: scale(1.03);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .instagram-post-bg {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .instagram-post:nth-child(1) .instagram-post-bg { background: linear-gradient(135deg, #e8f0ed, #d4e8e3); }
+        .instagram-post:nth-child(2) .instagram-post-bg { background: linear-gradient(135deg, #d4e8e3, #bfdbd3); }
+        .instagram-post:nth-child(3) .instagram-post-bg { background: linear-gradient(135deg, #e0ebe7, #cce0da); }
+        .instagram-post:nth-child(4) .instagram-post-bg { background: linear-gradient(135deg, #d8ece6, #c5ddd5); }
+        .instagram-post:nth-child(5) .instagram-post-bg { background: linear-gradient(135deg, #cce0da, #b8d4cb); }
+        .instagram-post:nth-child(6) .instagram-post-bg { background: linear-gradient(135deg, #e5eeeb, #d1e5de); }
+        .instagram-post:nth-child(7) .instagram-post-bg { background: linear-gradient(135deg, #dbe9e4, #c8dcd5); }
+        .instagram-post:nth-child(8) .instagram-post-bg { background: linear-gradient(135deg, #e2edea, #ceddd8); }
+
+        .instagram-post-bg svg {
+            width: 32px;
+            height: 32px;
+            color: var(--teal);
+            opacity: 0.25;
+        }
+
+        .instagram-overlay {
+            position: absolute;
+            inset: 0;
+            background: rgba(42, 125, 110, 0.8);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            opacity: 0;
+            transition: opacity var(--transition);
+        }
+
+        .instagram-post:hover .instagram-overlay {
+            opacity: 1;
+        }
+
+        .instagram-stat {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            color: var(--white);
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
+        .instagram-stat svg {
+            width: 18px;
+            height: 18px;
+        }
+
+        /* ===== CTA SECTION ===== */
+        .cta-section {
+            background: var(--white);
+            padding: 100px 0;
+        }
+
+        .cta-box {
+            background: linear-gradient(135deg, var(--bg-lighter) 0%, var(--bg-light) 100%);
+            border-radius: var(--radius-xl);
+            padding: 72px 60px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            border: 1px solid var(--teal-subtle);
+        }
+
+        .cta-box::before {
+            content: '';
+            position: absolute;
+            top: -100px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 500px;
+            height: 500px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(42, 125, 110, 0.06) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .cta-box h2 {
+            font-size: clamp(1.75rem, 3vw, 2.5rem);
+            margin-bottom: 16px;
+            position: relative;
+        }
+
+        .cta-box h2 span {
+            color: var(--teal);
+        }
+
+        .cta-box p {
+            font-size: 1.05rem;
+            color: var(--text-secondary);
+            max-width: 520px;
+            margin: 0 auto 36px;
+            position: relative;
+        }
+
+        .cta-actions {
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+            flex-wrap: wrap;
+            margin-bottom: 40px;
+            position: relative;
+        }
+
+        .cta-location {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            position: relative;
+        }
+
+        .cta-location svg {
+            width: 18px;
+            height: 18px;
+            color: var(--teal);
+        }
+
+        /* ===== FOOTER ===== */
+        .footer {
+            background: var(--text-primary);
+            color: rgba(255, 255, 255, 0.7);
+            padding: 60px 0 32px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 48px;
+            margin-bottom: 48px;
+        }
+
+        .footer-brand {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--white);
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .footer-brand svg {
+            width: 28px;
+            height: 28px;
+            color: var(--teal-light);
+        }
+
+        .footer-desc {
+            font-size: 0.9rem;
+            line-height: 1.7;
+            max-width: 320px;
+        }
+
+        .footer h4 {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: var(--white);
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .footer-links {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .footer-links a {
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.6);
+            transition: color var(--transition);
+        }
+
+        .footer-links a:hover {
+            color: var(--teal-light);
+        }
+
+        .footer-social {
+            display: flex;
+            gap: 12px;
+            margin-top: 4px;
+        }
+
+        .footer-social a {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.08);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all var(--transition);
+        }
+
+        .footer-social a:hover {
+            background: var(--teal);
+            transform: translateY(-2px);
+        }
+
+        .footer-social svg {
+            width: 18px;
+            height: 18px;
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        .footer-social a:hover svg {
+            color: var(--white);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            padding-top: 28px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.8rem;
+            color: rgba(255, 255, 255, 0.4);
+        }
+
+        /* ===== FLOATING BUTTON ===== */
+        .floating-btn {
+            position: fixed;
+            bottom: 28px;
+            right: 28px;
+            z-index: 999;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            background: var(--teal);
+            color: var(--white);
+            padding: 16px 28px;
+            border-radius: 50px;
+            font-family: 'Outfit', sans-serif;
+            font-size: 0.95rem;
+            font-weight: 600;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 8px 32px rgba(42, 125, 110, 0.4);
+            transition: all var(--transition);
+            transform: translateY(100px);
+            opacity: 0;
+        }
+
+        .floating-btn.visible {
+            transform: translateY(0);
+            opacity: 1;
+        }
+
+        .floating-btn:hover {
+            background: var(--teal-dark);
+            box-shadow: 0 12px 40px rgba(42, 125, 110, 0.5);
+            transform: translateY(-3px);
+        }
+
+        .floating-btn svg {
+            width: 20px;
+            height: 20px;
+        }
+
+        .floating-btn .pulse {
+            position: absolute;
+            top: -4px;
+            right: -4px;
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            background: #f0b429;
+            border: 2px solid var(--white);
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(240, 180, 41, 0.5); }
+            70% { box-shadow: 0 0 0 10px rgba(240, 180, 41, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(240, 180, 41, 0); }
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 1024px) {
+            .hero-inner {
+                grid-template-columns: 1fr;
+                gap: 40px;
+                text-align: center;
+            }
+
+            .hero-content {
+                max-width: 100%;
+            }
+
+            .hero-actions {
+                justify-content: center;
+            }
+
+            .hero-visual {
+                min-height: 360px;
+            }
+
+            .hero-shape-main {
+                width: 300px;
+                height: 300px;
+            }
+
+            .hero-shape-inner {
+                width: 220px;
+                height: 220px;
+            }
+
+            .about-grid {
+                grid-template-columns: 1fr;
+                gap: 48px;
+            }
+
+            .treatments-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 32px;
+            }
+
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+                max-width: 560px;
+                margin: 0 auto;
+            }
+
+            .instagram-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 36px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .section {
+                padding: 72px 0;
+            }
+
+            .nav-links {
+                display: none;
+                position: fixed;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background: var(--white);
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 28px;
+                z-index: 999;
+            }
+
+            .nav-links.open {
+                display: flex;
+            }
+
+            .nav-links a {
+                font-size: 1.2rem;
+            }
+
+            .nav-mobile-toggle {
+                display: block;
+                z-index: 1001;
+            }
+
+            .nav-close {
+                position: absolute;
+                top: 24px;
+                right: 24px;
+                background: none;
+                border: none;
+                cursor: pointer;
+                display: none;
+            }
+
+            .nav-links.open .nav-close {
+                display: block;
+            }
+
+            .treatments-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .stats-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .instagram-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .cta-box {
+                padding: 48px 28px;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 32px;
+            }
+
+            .footer-bottom {
+                flex-direction: column;
+                gap: 12px;
+                text-align: center;
+            }
+
+            .floating-btn span {
+                display: none;
+            }
+
+            .floating-btn {
+                padding: 16px;
+                border-radius: 50%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .stats-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 24px;
+            }
+
+            .stat-number {
+                font-size: 1.75rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="nav" id="nav">
+        <div class="container nav-inner">
+            <a href="#" class="nav-brand">
+                <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M16 2C8.268 2 2 8.268 2 16s6.268 14 14 14 14-6.268 14-14S23.732 2 16 2z" fill="currentColor" opacity="0.1"/>
+                    <path d="M11 13c0-2.21 1.79-4 4-4h2c2.21 0 4 1.79 4 4v1c0 .55-.45 1-1 1h-8c-.55 0-1-.45-1-1v-1z" fill="currentColor" opacity="0.6"/>
+                    <path d="M10 17h12c.55 0 1 .45 1 1v2c0 3.31-2.69 6-6 6h-2c-3.31 0-6-2.69-6-6v-2c0-.55.45-1 1-1z" fill="currentColor"/>
+                </svg>
+                Dra. Marina Lopes
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#tratamentos">Tratamentos</a></li>
+                <li><a href="#resultados">Resultados</a></li>
+                <li><a href="#depoimentos">Depoimentos</a></li>
+                <li><a href="#contato" class="nav-cta">Agendar</a></li>
+            </ul>
+            <button class="nav-mobile-toggle" id="navToggle" aria-label="Menu">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+                    <line x1="3" y1="6" x2="21" y2="6"/>
+                    <line x1="3" y1="12" x2="21" y2="12"/>
+                    <line x1="3" y1="18" x2="21" y2="18"/>
+                </svg>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero" id="hero">
+        <div class="container hero-inner">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M8 1l1.796 3.64L13.66 5.36l-2.83 2.758.668 3.893L8 10.13l-3.498 1.88.668-3.893L2.34 5.36l3.864-.72L8 1z" fill="currentColor"/>
+                    </svg>
+                    Ortodontia de Excelencia
+                </div>
+                <h1>Dra. Marina <span>Lopes</span></h1>
+                <p class="hero-subtitle">Ortodontista | CRO-SP 45.892</p>
+                <p class="hero-tagline">Transformando sorrisos com precisao e cuidado</p>
+                <div class="hero-actions">
+                    <a href="#contato" class="btn-primary">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                            <line x1="16" y1="2" x2="16" y2="6"/>
+                            <line x1="8" y1="2" x2="8" y2="6"/>
+                            <line x1="3" y1="10" x2="21" y2="10"/>
+                        </svg>
+                        Agendar Consulta
+                    </a>
+                    <a href="#sobre" class="btn-secondary">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10"/>
+                            <line x1="12" y1="16" x2="12" y2="12"/>
+                            <line x1="12" y1="8" x2="12.01" y2="8"/>
+                        </svg>
+                        Conhecer Mais
+                    </a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="hero-shape-main">
+                    <div class="hero-shape-inner"></div>
+                    <div class="hero-shape-icon">
+                        <svg viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M60 15c-18 0-30 12-30 28 0 10 4 18 10 24 4 4 6 10 6 16v2c0 4.4 3.6 8 8 8h12c4.4 0 8-3.6 8-8v-2c0-6 2-12 6-16 6-6 10-14 10-24 0-16-12-28-30-28z" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M44 97h32M48 105h24" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+                            <path d="M46 55c8-4 20-4 28 0" stroke="currentColor" stroke-width="2" stroke-linecap="round" opacity="0.5"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class="hero-float-1">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                        <polyline points="22 4 12 14.01 9 11.01"/>
+                    </svg>
+                </div>
+                <div class="hero-float-2">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+                    </svg>
+                </div>
+                <div class="hero-float-3">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                    </svg>
+                </div>
+                <div class="hero-dots">
+                    <div class="hero-dot"></div><div class="hero-dot"></div><div class="hero-dot"></div><div class="hero-dot"></div>
+                    <div class="hero-dot"></div><div class="hero-dot"></div><div class="hero-dot"></div><div class="hero-dot"></div>
+                    <div class="hero-dot"></div><div class="hero-dot"></div><div class="hero-dot"></div><div class="hero-dot"></div>
+                    <div class="hero-dot"></div><div class="hero-dot"></div><div class="hero-dot"></div><div class="hero-dot"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About -->
+    <section class="section about" id="sobre">
+        <div class="container about-grid">
+            <div class="about-image-wrapper reveal-left">
+                <div class="about-image">
+                    <div class="about-image-placeholder">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                            <circle cx="12" cy="7" r="4"/>
+                        </svg>
+                        <span>Foto Profissional</span>
+                    </div>
+                </div>
+                <div class="about-image-accent"></div>
+            </div>
+            <div class="about-content reveal-right">
+                <div class="section-label">
+                    <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M8 1v14M1 8h14"/>
+                    </svg>
+                    Sobre Mim
+                </div>
+                <h2>Cuidado personalizado para cada <span>sorriso</span></h2>
+                <p class="about-text">
+                    Sou a Dra. Marina Lopes, ortodontista formada pela Universidade de Sao Paulo (USP) com especializacao em Ortodontia pela APCD. Ha mais de 12 anos, dedico minha carreira a transformar sorrisos com tecnicas modernas e atendimento humanizado.
+                </p>
+                <p class="about-text">
+                    Minha abordagem combina tecnologia de ponta com um olhar cuidadoso para as necessidades individuais de cada paciente. Acredito que um sorriso bonito vai alem da estetica -- e sobre confianca, saude e bem-estar.
+                </p>
+                <p class="about-text">
+                    Sou certificada Invisalign Provider e referencia em ortodontia lingual na regiao de Sao Paulo, oferecendo tratamentos discretos e eficientes para adultos e adolescentes.
+                </p>
+                <div class="about-credentials">
+                    <div class="credential-tag">
+                        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M13.5 5.5L6.5 12.5 2.5 8.5"/>
+                        </svg>
+                        Invisalign Certified
+                    </div>
+                    <div class="credential-tag">
+                        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M13.5 5.5L6.5 12.5 2.5 8.5"/>
+                        </svg>
+                        Ortodontia Lingual
+                    </div>
+                    <div class="credential-tag">
+                        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M13.5 5.5L6.5 12.5 2.5 8.5"/>
+                        </svg>
+                        Aparelho Autoligado
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Treatments -->
+    <section class="section treatments" id="tratamentos">
+        <div class="container">
+            <div class="section-header reveal">
+                <div class="section-label">
+                    <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="2" y="2" width="12" height="12" rx="2"/>
+                        <path d="M6 2v12M10 2v12M2 6h12M2 10h12"/>
+                    </svg>
+                    Tratamentos
+                </div>
+                <h2 class="section-title">Solucoes ortodonticas para cada necessidade</h2>
+                <p class="section-desc">Ofereco as tecnicas mais modernas e eficientes do mercado, sempre priorizando o conforto e os resultados dos meus pacientes.</p>
+            </div>
+            <div class="treatments-grid">
+                <!-- Card 1 -->
+                <div class="treatment-card reveal stagger-1">
+                    <div class="treatment-icon">
+                        <svg viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="4" y="8" width="20" height="12" rx="6"/>
+                            <path d="M10 8v12M14 8v12M18 8v12"/>
+                        </svg>
+                    </div>
+                    <h3>Invisalign</h3>
+                    <p>Alinhadores transparentes removiveis que corrigem o sorriso de forma discreta e confortavel, sem brackets ou fios metalicos.</p>
+                </div>
+                <!-- Card 2 -->
+                <div class="treatment-card reveal stagger-2">
+                    <div class="treatment-icon">
+                        <svg viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M6 14h16"/>
+                            <rect x="8" y="11" width="4" height="6" rx="1"/>
+                            <rect x="16" y="11" width="4" height="6" rx="1"/>
+                            <circle cx="14" cy="14" r="1.5"/>
+                        </svg>
+                    </div>
+                    <h3>Aparelho Fixo Estetico</h3>
+                    <p>Brackets de ceramica ou safira que se confundem com a cor dos dentes, proporcionando um tratamento eficaz e discreto.</p>
+                </div>
+                <!-- Card 3 -->
+                <div class="treatment-card reveal stagger-3">
+                    <div class="treatment-icon">
+                        <svg viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M7 18c0-6 4-11 7-11s7 5 7 11"/>
+                            <path d="M10 18h8" stroke-dasharray="2 2"/>
+                            <circle cx="14" cy="20" r="2"/>
+                        </svg>
+                    </div>
+                    <h3>Ortodontia Lingual</h3>
+                    <p>Aparelho posicionado na parte interna dos dentes, completamente invisivel. Ideal para quem busca discricao total no tratamento.</p>
+                </div>
+                <!-- Card 4 -->
+                <div class="treatment-card reveal stagger-4">
+                    <div class="treatment-icon">
+                        <svg viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M8 10C8 6.69 10.69 4 14 4s6 2.69 6 6c0 4-3 6-6 10-3-4-6-6-6-10z"/>
+                            <path d="M14 10h.01"/>
+                            <path d="M8 22h12" opacity="0.5"/>
+                            <path d="M10 25h8" opacity="0.3"/>
+                        </svg>
+                    </div>
+                    <h3>Alinhadores Transparentes</h3>
+                    <p>Alternativas aos alinhadores tradicionais com tecnologia avancada de escaneamento 3D e planejamento digital completo.</p>
+                </div>
+                <!-- Card 5 -->
+                <div class="treatment-card reveal stagger-5">
+                    <div class="treatment-icon">
+                        <svg viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="14" cy="10" r="5"/>
+                            <path d="M8 22c0-3.31 2.69-6 6-6s6 2.69 6 6"/>
+                            <path d="M17 8l2-3M11 8L9 5"/>
+                        </svg>
+                    </div>
+                    <h3>Ortodontia Infantil</h3>
+                    <p>Tratamento ortodontico preventivo e interceptivo para criancas, garantindo o desenvolvimento saudavel da oclusao desde cedo.</p>
+                </div>
+                <!-- Card 6 -->
+                <div class="treatment-card reveal stagger-6">
+                    <div class="treatment-icon">
+                        <svg viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 4v8l-4 4"/>
+                            <path d="M16 4v8l4 4"/>
+                            <rect x="6" y="18" width="16" height="6" rx="3"/>
+                        </svg>
+                    </div>
+                    <h3>Contencao</h3>
+                    <p>Aparelhos de contencao fixos e removiveis para manter os resultados do tratamento ortodontico ao longo do tempo.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats -->
+    <section class="stats" id="resultados">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item reveal stagger-1">
+                    <div class="stat-number"><span class="prefix">+</span><span class="counter" data-target="2800">0</span></div>
+                    <div class="stat-label">Sorrisos Transformados</div>
+                    <div class="stat-divider"></div>
+                </div>
+                <div class="stat-item reveal stagger-2">
+                    <div class="stat-number"><span class="counter" data-target="12">0</span></div>
+                    <div class="stat-label">Anos de Experiencia</div>
+                    <div class="stat-divider"></div>
+                </div>
+                <div class="stat-item reveal stagger-3">
+                    <div class="stat-number"><span class="counter" data-target="4" data-decimal="9">0</span></div>
+                    <div class="stat-label">Avaliacao Google</div>
+                    <div class="stat-divider"></div>
+                </div>
+                <div class="stat-item reveal stagger-4">
+                    <div class="stat-number"><span class="counter" data-target="98">0</span><span class="prefix">%</span></div>
+                    <div class="stat-label">Satisfacao dos Pacientes</div>
+                    <div class="stat-divider"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="section testimonials" id="depoimentos">
+        <div class="container">
+            <div class="section-header reveal">
+                <div class="section-label">
+                    <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M14 10c0 .55-.45 1-1 1H5l-3 3V3c0-.55.45-1 1-1h10c.55 0 1 .45 1 1v7z"/>
+                    </svg>
+                    Depoimentos
+                </div>
+                <h2 class="section-title">O que dizem meus pacientes</h2>
+                <p class="section-desc">A satisfacao dos meus pacientes e a minha maior motivacao. Confira alguns depoimentos reais.</p>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card reveal stagger-1">
+                    <div class="testimonial-stars">
+                        <svg viewBox="0 0 18 18"><polygon points="9,1 11.5,6.5 17,7 13,11 14,17 9,14 4,17 5,11 1,7 6.5,6.5"/></svg>
+                        <svg viewBox="0 0 18 18"><polygon points="9,1 11.5,6.5 17,7 13,11 14,17 9,14 4,17 5,11 1,7 6.5,6.5"/></svg>
+                        <svg viewBox="0 0 18 18"><polygon points="9,1 11.5,6.5 17,7 13,11 14,17 9,14 4,17 5,11 1,7 6.5,6.5"/></svg>
+                        <svg viewBox="0 0 18 18"><polygon points="9,1 11.5,6.5 17,7 13,11 14,17 9,14 4,17 5,11 1,7 6.5,6.5"/></svg>
+                        <svg viewBox="0 0 18 18"><polygon points="9,1 11.5,6.5 17,7 13,11 14,17 9,14 4,17 5,11 1,7 6.5,6.5"/></svg>
+                    </div>
+                    <p class="testimonial-quote">
+                        A Dra. Marina mudou completamente meu sorriso e minha autoestima. Sempre atenciosa, explicou cada etapa do tratamento com Invisalign. Resultado incrivel em menos tempo do que eu imaginava. Recomendo de olhos fechados!
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">CR</div>
+                        <div class="testimonial-author-info">
+                            <h4>Carolina Ribeiro</h4>
+                            <span>Tratamento com Invisalign</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card reveal stagger-2">
+                    <div class="testimonial-stars">
+                        <svg viewBox="0 0 18 18"><polygon points="9,1 11.5,6.5 17,7 13,11 14,17 9,14 4,17 5,11 1,7 6.5,6.5"/></svg>
+                        <svg viewBox="0 0 18 18"><polygon points="9,1 11.5,6.5 17,7 13,11 14,17 9,14 4,17 5,11 1,7 6.5,6.5"/></svg>
+                        <svg viewBox="0 0 18 18"><polygon points="9,1 11.5,6.5 17,7 13,11 14,17 9,14 4,17 5,11 1,7 6.5,6.5"/></svg>
+                        <svg viewBox="0 0 18 18"><polygon points="9,1 11.5,6.5 17,7 13,11 14,17 9,14 4,17 5,11 1,7 6.5,6.5"/></svg>
+                        <svg viewBox="0 0 18 18"><polygon points="9,1 11.5,6.5 17,7 13,11 14,17 9,14 4,17 5,11 1,7 6.5,6.5"/></svg>
+                    </div>
+                    <p class="testimonial-quote">
+                        Meu filho de 9 anos fez o tratamento ortodontico com a Dra. Marina e a experiencia foi maravilhosa. Ela tem uma paciencia enorme com criancas e tornou as consultas algo divertido. O resultado ficou perfeito!
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">FM</div>
+                        <div class="testimonial-author-info">
+                            <h4>Fernanda Martins</h4>
+                            <span>Ortodontia Infantil</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card reveal stagger-3">
+                    <div class="testimonial-stars">
+                        <svg viewBox="0 0 18 18"><polygon points="9,1 11.5,6.5 17,7 13,11 14,17 9,14 4,17 5,11 1,7 6.5,6.5"/></svg>
+                        <svg viewBox="0 0 18 18"><polygon points="9,1 11.5,6.5 17,7 13,11 14,17 9,14 4,17 5,11 1,7 6.5,6.5"/></svg>
+                        <svg viewBox="0 0 18 18"><polygon points="9,1 11.5,6.5 17,7 13,11 14,17 9,14 4,17 5,11 1,7 6.5,6.5"/></svg>
+                        <svg viewBox="0 0 18 18"><polygon points="9,1 11.5,6.5 17,7 13,11 14,17 9,14 4,17 5,11 1,7 6.5,6.5"/></svg>
+                        <svg viewBox="0 0 18 18"><polygon points="9,1 11.5,6.5 17,7 13,11 14,17 9,14 4,17 5,11 1,7 6.5,6.5"/></svg>
+                    </div>
+                    <p class="testimonial-quote">
+                        Optei pela ortodontia lingual por questoes profissionais e foi a melhor decisao. Ninguem percebeu que eu estava em tratamento! A Dra. Marina e extremamente competente e o consultorio e impecavel. Nota 10!
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">RA</div>
+                        <div class="testimonial-author-info">
+                            <h4>Ricardo Almeida</h4>
+                            <span>Ortodontia Lingual</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Instagram -->
+    <section class="section instagram" id="instagram">
+        <div class="container">
+            <div class="instagram-header reveal">
+                <div class="section-label">
+                    <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="2" y="2" width="12" height="12" rx="3"/>
+                        <circle cx="8" cy="8" r="3"/>
+                        <circle cx="11.5" cy="4.5" r="0.8" fill="currentColor"/>
+                    </svg>
+                    Acompanhe no Instagram
+                </div>
+                <h2 class="section-title">Siga meu trabalho</h2>
+                <a href="#" class="instagram-handle">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                        <circle cx="12" cy="12" r="5"/>
+                        <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+                    </svg>
+                    @dra.marinalopes
+                </a>
+            </div>
+            <div class="instagram-grid">
+                <div class="instagram-post reveal stagger-1">
+                    <div class="instagram-post-bg">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg>
+                    </div>
+                    <div class="instagram-overlay">
+                        <span class="instagram-stat">
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                            324
+                        </span>
+                        <span class="instagram-stat">
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                            18
+                        </span>
+                    </div>
+                </div>
+                <div class="instagram-post reveal stagger-2">
+                    <div class="instagram-post-bg">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg>
+                    </div>
+                    <div class="instagram-overlay">
+                        <span class="instagram-stat">
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                            287
+                        </span>
+                        <span class="instagram-stat">
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                            24
+                        </span>
+                    </div>
+                </div>
+                <div class="instagram-post reveal stagger-3">
+                    <div class="instagram-post-bg">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg>
+                    </div>
+                    <div class="instagram-overlay">
+                        <span class="instagram-stat">
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                            412
+                        </span>
+                        <span class="instagram-stat">
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                            31
+                        </span>
+                    </div>
+                </div>
+                <div class="instagram-post reveal stagger-4">
+                    <div class="instagram-post-bg">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg>
+                    </div>
+                    <div class="instagram-overlay">
+                        <span class="instagram-stat">
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                            198
+                        </span>
+                        <span class="instagram-stat">
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                            12
+                        </span>
+                    </div>
+                </div>
+                <div class="instagram-post reveal stagger-5">
+                    <div class="instagram-post-bg">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg>
+                    </div>
+                    <div class="instagram-overlay">
+                        <span class="instagram-stat">
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                            356
+                        </span>
+                        <span class="instagram-stat">
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                            27
+                        </span>
+                    </div>
+                </div>
+                <div class="instagram-post reveal stagger-6">
+                    <div class="instagram-post-bg">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg>
+                    </div>
+                    <div class="instagram-overlay">
+                        <span class="instagram-stat">
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                            445
+                        </span>
+                        <span class="instagram-stat">
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                            39
+                        </span>
+                    </div>
+                </div>
+                <div class="instagram-post reveal stagger-5">
+                    <div class="instagram-post-bg">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg>
+                    </div>
+                    <div class="instagram-overlay">
+                        <span class="instagram-stat">
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                            267
+                        </span>
+                        <span class="instagram-stat">
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                            15
+                        </span>
+                    </div>
+                </div>
+                <div class="instagram-post reveal stagger-6">
+                    <div class="instagram-post-bg">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg>
+                    </div>
+                    <div class="instagram-overlay">
+                        <span class="instagram-stat">
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                            389
+                        </span>
+                        <span class="instagram-stat">
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                            22
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section" id="contato">
+        <div class="container">
+            <div class="cta-box reveal">
+                <div class="section-label">
+                    <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="2" y="2" width="12" height="12" rx="2"/>
+                        <path d="M11 2v4M5 2v4M2 8h12"/>
+                    </svg>
+                    Agenda Aberta
+                </div>
+                <h2>Agende Sua <span>Avaliacao</span></h2>
+                <p>Primeira consulta com avaliacao completa e planejamento digital do seu tratamento. Venha conhecer nosso espaco e descubra o melhor caminho para o seu sorriso ideal.</p>
+                <div class="cta-actions">
+                    <a href="#" class="btn-primary">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                        </svg>
+                        Agendar por Telefone
+                    </a>
+                    <a href="#" class="btn-secondary">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/>
+                        </svg>
+                        WhatsApp
+                    </a>
+                </div>
+                <div class="cta-location">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                        <circle cx="12" cy="10" r="3"/>
+                    </svg>
+                    Av. Paulista, 1374 - Sala 1208 - Bela Vista, Sao Paulo - SP
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <div class="footer-brand">
+                        <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M16 2C8.268 2 2 8.268 2 16s6.268 14 14 14 14-6.268 14-14S23.732 2 16 2z" fill="currentColor" opacity="0.15"/>
+                            <path d="M11 13c0-2.21 1.79-4 4-4h2c2.21 0 4 1.79 4 4v1c0 .55-.45 1-1 1h-8c-.55 0-1-.45-1-1v-1z" fill="currentColor" opacity="0.5"/>
+                            <path d="M10 17h12c.55 0 1 .45 1 1v2c0 3.31-2.69 6-6 6h-2c-3.31 0-6-2.69-6-6v-2c0-.55.45-1 1-1z" fill="currentColor"/>
+                        </svg>
+                        Dra. Marina Lopes
+                    </div>
+                    <p class="footer-desc">Ortodontista especializada em tratamentos esteticos e funcionais. Transformando sorrisos em Sao Paulo ha mais de 12 anos.</p>
+                </div>
+                <div>
+                    <h4>Navegacao</h4>
+                    <ul class="footer-links">
+                        <li><a href="#sobre">Sobre</a></li>
+                        <li><a href="#tratamentos">Tratamentos</a></li>
+                        <li><a href="#resultados">Resultados</a></li>
+                        <li><a href="#depoimentos">Depoimentos</a></li>
+                        <li><a href="#contato">Contato</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Tratamentos</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Invisalign</a></li>
+                        <li><a href="#">Aparelho Estetico</a></li>
+                        <li><a href="#">Ortodontia Lingual</a></li>
+                        <li><a href="#">Alinhadores</a></li>
+                        <li><a href="#">Ortodontia Infantil</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Redes Sociais</h4>
+                    <div class="footer-social">
+                        <a href="#" aria-label="Instagram">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                                <circle cx="12" cy="12" r="5"/>
+                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+                            </svg>
+                        </a>
+                        <a href="#" aria-label="Facebook">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+                            </svg>
+                        </a>
+                        <a href="#" aria-label="YouTube">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19.1c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.43z"/>
+                                <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"/>
+                            </svg>
+                        </a>
+                        <a href="#" aria-label="LinkedIn">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+                                <rect x="2" y="9" width="4" height="12"/>
+                                <circle cx="4" cy="4" r="2"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <span>2024 Dra. Marina Lopes. Todos os direitos reservados. CRO-SP 45.892</span>
+                <span>Responsavel Tecnico: Dra. Marina Lopes - CRO-SP 45.892</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Button -->
+    <button class="floating-btn" id="floatingBtn">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+            <line x1="16" y1="2" x2="16" y2="6"/>
+            <line x1="8" y1="2" x2="8" y2="6"/>
+            <line x1="3" y1="10" x2="21" y2="10"/>
+        </svg>
+        <span>Agendar</span>
+        <div class="pulse"></div>
+    </button>
+
+    <script>
+        // ===== Navigation scroll effect =====
+        const nav = document.getElementById('nav');
+        let lastScroll = 0;
+
+        window.addEventListener('scroll', () => {
+            const currentScroll = window.pageYOffset;
+            if (currentScroll > 50) {
+                nav.classList.add('scrolled');
+            } else {
+                nav.classList.remove('scrolled');
+            }
+            lastScroll = currentScroll;
+        });
+
+        // ===== Mobile nav toggle =====
+        const navToggle = document.getElementById('navToggle');
+        const navLinks = document.getElementById('navLinks');
+
+        navToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('open');
+            const isOpen = navLinks.classList.contains('open');
+            navToggle.innerHTML = isOpen
+                ? '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>'
+                : '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>';
+        });
+
+        navLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('open');
+                navToggle.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>';
+            });
+        });
+
+        // ===== Scroll reveal =====
+        const revealElements = document.querySelectorAll('.reveal, .reveal-left, .reveal-right');
+
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, {
+            threshold: 0.1,
+            rootMargin: '0px 0px -60px 0px'
+        });
+
+        revealElements.forEach(el => revealObserver.observe(el));
+
+        // ===== Counter animation =====
+        const counters = document.querySelectorAll('.counter');
+        let countersAnimated = false;
+
+        const counterObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting && !countersAnimated) {
+                    countersAnimated = true;
+                    animateCounters();
+                }
+            });
+        }, { threshold: 0.3 });
+
+        const statsSection = document.querySelector('.stats');
+        if (statsSection) counterObserver.observe(statsSection);
+
+        function animateCounters() {
+            counters.forEach(counter => {
+                const target = parseInt(counter.getAttribute('data-target'));
+                const decimal = counter.getAttribute('data-decimal');
+                const duration = 2000;
+                const start = performance.now();
+
+                function update(now) {
+                    const elapsed = now - start;
+                    const progress = Math.min(elapsed / duration, 1);
+                    const eased = 1 - Math.pow(1 - progress, 3);
+
+                    if (decimal) {
+                        const current = (target + parseInt(decimal) / 10) * eased;
+                        counter.textContent = current.toFixed(1).replace('.', ',');
+                    } else {
+                        const current = Math.floor(target * eased);
+                        if (target >= 1000) {
+                            counter.textContent = current.toLocaleString('pt-BR');
+                        } else {
+                            counter.textContent = current;
+                        }
+                    }
+
+                    if (progress < 1) {
+                        requestAnimationFrame(update);
+                    }
+                }
+
+                requestAnimationFrame(update);
+            });
+        }
+
+        // ===== Floating button =====
+        const floatingBtn = document.getElementById('floatingBtn');
+
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 600) {
+                floatingBtn.classList.add('visible');
+            } else {
+                floatingBtn.classList.remove('visible');
+            }
+        });
+
+        floatingBtn.addEventListener('click', () => {
+            document.getElementById('contato').scrollIntoView({ behavior: 'smooth' });
+        });
+
+        // ===== Smooth scroll for all anchors =====
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    const offset = 80;
+                    const top = target.getBoundingClientRect().top + window.pageYOffset - offset;
+                    window.scrollTo({ top, behavior: 'smooth' });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
